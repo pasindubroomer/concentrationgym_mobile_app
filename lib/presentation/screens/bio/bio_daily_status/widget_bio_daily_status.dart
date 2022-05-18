@@ -14,7 +14,7 @@ class UserStatusWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<UserStatusCubit, UserStatusState>(
       buildWhen: (previous, current) =>
-          previous.toggleButtonSelectedIndex !=
+          previous.toggleButtonSelectedIndex ==
           current.toggleButtonSelectedIndex,
       builder: (context, state) {
         if (state.processingState == ProcessingStatus.loading) {
