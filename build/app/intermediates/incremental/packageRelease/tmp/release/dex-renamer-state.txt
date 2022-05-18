@@ -1,0 +1,4 @@
+#Mon May 16 02:39:13 PDT 2022
+base.0=E\:\\Documents\\Flutter App\\concentrationgym_mobile_app\\concentrationgym_mobile_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

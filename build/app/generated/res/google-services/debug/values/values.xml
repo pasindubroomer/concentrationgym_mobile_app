@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">399785443196-krjt0pcrduljadp7re0vtpas1ffrt9fs.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">399785443196</string>
+    <string name="google_api_key" translatable="false">AIzaSyCBMX70kRD_ZOfOdiqFfAU6XoVon8wo0WU</string>
+    <string name="google_app_id" translatable="false">1:399785443196:android:0bf96cd77e8544effc6ef9</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCBMX70kRD_ZOfOdiqFfAU6XoVon8wo0WU</string>
+    <string name="google_storage_bucket" translatable="false">concentrationgym-63f92.appspot.com</string>
+    <string name="project_id" translatable="false">concentrationgym-63f92</string>
+</resources>
