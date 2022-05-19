@@ -16006,9 +16006,9 @@ com.google.android.gms.safetynet.SafetyNetApi$zzc
 com.google.protobuf.BinaryWriter$SafeDirectWriter
 androidx.customview.widget.ExploreByTouchHelper
 kotlinx.coroutines.flow.FlowKt__ReduceKt$single$$inlined$collect$1
-io.flutter.embedding.engine.systemchannels.PlatformViewsChannel:
-    private static final java.lang.String TAG
 io.flutter.embedding.engine.systemchannels.PlatformChannel:
+    private static final java.lang.String TAG
+io.flutter.embedding.engine.systemchannels.PlatformViewsChannel:
     private static final java.lang.String TAG
 io.grpc.internal.InternalHandlerRegistry$Builder
 com.google.common.collect.Multisets$FilteredMultiset$1

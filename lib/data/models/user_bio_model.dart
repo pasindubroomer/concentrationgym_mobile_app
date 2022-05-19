@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:equatable/equatable.dart';
 
 class UserBioModel extends Equatable {
@@ -5,7 +7,7 @@ class UserBioModel extends Equatable {
   final String? team;
   final String? league;
   final String? favouriteGoalie;
-  final String? goalieCareerTargets;
+  final String? careerTargets;
   final String? other;
 
   const UserBioModel(
@@ -13,19 +15,19 @@ class UserBioModel extends Equatable {
       this.team,
       this.league,
       this.favouriteGoalie,
-      this.goalieCareerTargets,
+      this.careerTargets,
       this.other});
 
   @override
   List<Object?> get props =>
-      [uid, team, league, favouriteGoalie, goalieCareerTargets, other];
+      [uid, team, league, favouriteGoalie, careerTargets, other];
 
   UserBioModel copyWith({
     String? uid,
     String? team,
     String? league,
     String? favouriteGoalie,
-    String? goalieCareerTargets,
+    String? careerTargets,
     String? other,
   }) {
     return UserBioModel(
@@ -33,10 +35,28 @@ class UserBioModel extends Equatable {
       team: team ?? this.team,
       league: league ?? this.league,
       favouriteGoalie: favouriteGoalie ?? this.favouriteGoalie,
-      goalieCareerTargets: goalieCareerTargets ?? this.goalieCareerTargets,
+      careerTargets: careerTargets ?? this.careerTargets,
       other: other ?? this.other,
     );
   }
 
   static const empty = UserBioModel(uid: "");
+
+  factory UserBioModel.fromJson(Map<String, dynamic> json) {
+    return UserBioModel(
+      team: json['team'] as String?,
+      league: json['league'] as String?,
+      favouriteGoalie: json['favourite_goalie'] as String?,
+      careerTargets: json['career_targets'] as String?,
+      other: json['other'] as String?,
+    );
+  }
+
+  Map<String, dynamic> toJson() => <String, dynamic>{
+        'team': team,
+        'league': league,
+        'favourite_goalie': favouriteGoalie,
+        'career_targets': careerTargets,
+        'other': other,
+      };
 }

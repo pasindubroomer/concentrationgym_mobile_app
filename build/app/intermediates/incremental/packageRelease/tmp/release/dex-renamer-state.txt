@@ -1,4 +1,4 @@
-#Thu May 19 15:01:59 IST 2022
-base.0=F\:\\Flutter\\concetrationgym_gma_app\\concentrationgym_mobile_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+#Thu May 19 22:22:24 IST 2022
+base.0=E\:\\Documents\\GitHub\\concentrationgym_mobile_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

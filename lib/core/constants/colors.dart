@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 var kmainBackgroundColor = const Color(0xFFfdfdfd);
 var navbarBackgroundColor = const Color(0xfffbc02d);
 
-var kTextBlackColor = const Color(0xFFFFFFFF);
-var kTextWhiteColor = const Color(0xFFFFFFFF);
+var kTextBlackColor = const Color(0xFF070707);
+var kTextWhiteColor = Color(0xFFFFFFFF);
 
 var kDefaultBlueColor = const Color(0xFF3676FF);
 var kDefaultBlackColor = const Color(0xFF202020);
