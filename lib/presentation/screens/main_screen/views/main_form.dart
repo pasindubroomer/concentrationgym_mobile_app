@@ -22,7 +22,7 @@ class MainForm extends StatelessWidget {
               ? const Center(child: CircularProgressIndicator())
               : SingleChildScrollView(
                   child: Padding(
-                    padding: kPadding,
+                    padding: kPaddingDefault,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,

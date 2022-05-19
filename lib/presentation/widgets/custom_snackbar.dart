@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 SnackBar showSnackbar(String msg) {
   return SnackBar(
     elevation: 6.0,
-    backgroundColor: kTextDefaultBlackColor,
+    backgroundColor: kDefaultBlackColor,
     behavior: SnackBarBehavior.floating,
     content: Text(
       msg,

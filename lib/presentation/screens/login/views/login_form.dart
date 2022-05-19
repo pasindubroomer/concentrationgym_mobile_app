@@ -18,7 +18,7 @@ class LoginForm extends StatelessWidget {
     return BlocListener<LoginCubit, LoginState>(
         child: SingleChildScrollView(
           child: Padding(
-            padding: kPadding,
+            padding: kPaddingDefault,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [

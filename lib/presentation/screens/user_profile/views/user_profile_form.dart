@@ -127,11 +127,12 @@ class UserProfileForm extends StatelessWidget {
                             ),
                           ],
                           onPressed: (int index) {
-                            context.read<UserProfileCubit>().toggleButtonChanged(index);
+                            context
+                                .read<UserProfileCubit>()
+                                .toggleButtonChanged(index);
                           },
                           isSelected: state.toggleButtonSelectionList,
                         ),
-
                       ],
                     );
                   }
@@ -141,7 +142,9 @@ class UserProfileForm extends StatelessWidget {
                 height: 3.h,
               ),
               BlocBuilder<UserProfileCubit, UserProfileState>(
-                buildWhen: (previous, current) => previous.toggleButtonSelectedIndex!=current.toggleButtonSelectedIndex,
+                buildWhen: (previous, current) =>
+                    previous.toggleButtonSelectedIndex !=
+                    current.toggleButtonSelectedIndex,
                 builder: (context, state) {
                   if (state.loadingState == ProcessingStatus.loading) {
                     return const Center(
@@ -205,18 +208,17 @@ class UserProfileForm extends StatelessWidget {
 
   Container buildEditBio(BuildContext context) {
     return Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),color: kTextDefaultRedColor),
-                          padding: EdgeInsets.symmetric(horizontal: 4.w,vertical: 1.h),
-                          child: Text(
-                            "EDIT BIO",
-                            style: Theme.of(context)
-                                .textTheme
-                                .labelSmall!
-                                .copyWith(
-                                    fontWeight: FontWeight.w500,
-                                    color: kTextDefaultWhiteColor),
-                          ),
-                        );
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5), color: kDefaultBlueColor),
+      padding: EdgeInsets.symmetric(horizontal: 4.w, vertical: 1.h),
+      child: Text(
+        "EDIT BIO",
+        style: Theme.of(context)
+            .textTheme
+            .labelSmall!
+            .copyWith(fontWeight: FontWeight.w500, color: kDefaultWhiteColor),
+      ),
+    );
   }
 
   Column buildStatusWidget(BuildContext context, UserProfileState state,
@@ -321,14 +323,16 @@ class UserProfileForm extends StatelessWidget {
             Text(
               "SUPPORTER OF ",
               style: Theme.of(context).textTheme.headline6!.copyWith(
-                  fontWeight: FontWeight.w500, color: kTextDefaultRedColor),
+                  fontWeight: FontWeight.w500, color: kDefaultBlueColor),
             )
           ],
         ),
         Text(
           state.userProfileModel!.community.toString(),
-          style: Theme.of(context).textTheme.bodySmall!.copyWith(
-              fontWeight: FontWeight.w600, color: kTextDefaultBlackColor),
+          style: Theme.of(context)
+              .textTheme
+              .bodySmall!
+              .copyWith(fontWeight: FontWeight.w600, color: kDefaultBlackColor),
         )
       ],
     );
@@ -360,19 +364,19 @@ class UserProfileForm extends StatelessWidget {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: kTextDefaultWhiteColor,
+                        color: kDefaultWhiteColor,
                         width: 3,
                       ),
-                      color: kTextDefaultBlackColor),
+                      color: kDefaultBlackColor),
                   child: Icon(
                     Icons.edit,
                     size: 4.w,
-                    color: kTextDefaultWhiteColor,
+                    color: kDefaultWhiteColor,
                   )))
         ],
       ),
       circularStrokeCap: CircularStrokeCap.round,
-      progressColor: kTextDefaultRedColor,
+      progressColor: kDefaultBlueColor,
     );
   }
 }

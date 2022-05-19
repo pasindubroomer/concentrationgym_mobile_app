@@ -1,4 +1,3 @@
-
 import 'package:concentrationgym_mobile_app/presentation/screens/login/login.dart';
 import 'package:concentrationgym_mobile_app/presentation/screens/user_profile/views/user_profile_page.dart';
 import 'package:flutter/material.dart';
@@ -32,10 +31,10 @@ class AppRouter {
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
-              body: Center(
-                child: Text('No route defined for ${settings.name}'),
-              ),
-            ));
+                  body: Center(
+                    child: Text('No route defined for ${settings.name}'),
+                  ),
+                ));
     }
   }
 }

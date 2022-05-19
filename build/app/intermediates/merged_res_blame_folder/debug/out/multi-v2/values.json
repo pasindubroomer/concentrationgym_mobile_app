@@ -1,29 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Documents\\Flutter App\\concentrationgym_mobile_app\\concentrationgym_mobile_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "F:\\Flutter\\concetrationgym_gma_app\\concentrationgym_mobile_app\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "E:\\Documents\\Flutter App\\concentrationgym_mobile_app\\concentrationgym_mobile_app\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,821",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "472,987"
-                    },
-                    "to": {
-                        "startLines": "134,139",
-                        "startColumns": "4,4",
-                        "startOffsets": "9785,10082",
-                        "endLines": "138,141",
-                        "endColumns": "12,12",
-                        "endOffsets": "10077,10246"
-                    }
-                },
-                {
-                    "source": "E:\\Documents\\Flutter App\\concentrationgym_mobile_app\\concentrationgym_mobile_app\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
+                    "source": "F:\\Flutter\\concetrationgym_gma_app\\concentrationgym_mobile_app\\build\\app\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",
@@ -111,6 +92,25 @@
                         "startOffsets": "6495,7673",
                         "endColumns": "67,166",
                         "endOffsets": "6558,7835"
+                    }
+                },
+                {
+                    "source": "F:\\Flutter\\concetrationgym_gma_app\\concentrationgym_mobile_app\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,821",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "472,987"
+                    },
+                    "to": {
+                        "startLines": "134,139",
+                        "startColumns": "4,4",
+                        "startOffsets": "9785,10082",
+                        "endLines": "138,141",
+                        "endColumns": "12,12",
+                        "endOffsets": "10077,10246"
                     }
                 },
                 {

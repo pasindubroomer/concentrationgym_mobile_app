@@ -17,6 +17,7 @@ import '../core/themes/app_theme.dart';
 import '../data/repositories/authentication_repository.dart';
 import '../presentation/router/router.dart';
 import '../presentation/screens/bio/sc_bio.dart';
+import '../presentation/screens/profile/sc_profile.dart';
 import '../presentation/screens/splash/sc_splash.dart';
 
 class GMAApp extends StatelessWidget {
@@ -31,23 +32,28 @@ class GMAApp extends StatelessWidget {
         overlayColor: Colors.white,
         overlayWidget: Center(
           child: SpinKitCircle(
-            color: kTextDefaultBlackColor,
+            color: kDefaultBlackColor,
             size: 25.0,
           ),
         ),
         overlayOpacity: 1,
         child: MaterialApp(
           debugShowCheckedModeBanner: config.debugTag,
-          theme:  AppTheme.lightTheme,
+          theme: AppTheme.lightTheme,
           onGenerateRoute: AppRouter.generateRoute,
           home: BlocBuilder<AppBloc, AppState>(
-            buildWhen: (previous, current) => previous.appAuthenticatedStatus!=current.appAuthenticatedStatus,
+            buildWhen: (previous, current) =>
+                previous.appAuthenticatedStatus !=
+                current.appAuthenticatedStatus,
             builder: (context, state) {
-              if (state.appAuthenticatedStatus  == AppAuthenticatedStatus.uninitialized) {
+              if (state.appAuthenticatedStatus ==
+                  AppAuthenticatedStatus.uninitialized) {
                 return SplashScreen();
-              } else if (state.appAuthenticatedStatus  == AppAuthenticatedStatus.unauthenticated) {
+              } else if (state.appAuthenticatedStatus ==
+                  AppAuthenticatedStatus.unauthenticated) {
                 return const LoginPage();
-              } else if (state.appAuthenticatedStatus  == AppAuthenticatedStatus.authenticated) {
+              } else if (state.appAuthenticatedStatus ==
+                  AppAuthenticatedStatus.authenticated) {
                 return const BioScreen();
               }
               return const Center(child: Text('Unhandled State'));
@@ -56,14 +62,12 @@ class GMAApp extends StatelessWidget {
         ),
       );
     });
-
-
   }
 
   static void initSystemDefault() {
     SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
-        statusBarColor: kTextDefaultRedColor,
+        statusBarColor: kDefaultBlueColor,
       ),
     );
   }
@@ -83,7 +87,7 @@ class GMAApp extends StatelessWidget {
                 AppBloc(authenticationRepository: AuthenticationRepository()),
           ),
         ],
-        child:const GMAApp(),
+        child: const GMAApp(),
       ),
     );
   }

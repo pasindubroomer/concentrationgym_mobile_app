@@ -12,19 +12,23 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(
-        "Bio",
+        "Profile",
         style: Theme.of(context)
             .textTheme
-            .bodyText2!
+            .headline6!
             .copyWith(fontWeight: FontWeight.bold),
       ),
       elevation: 1,
       centerTitle: true,
-      leading: const Icon(Icons.alarm),
+      leading: Icon(
+        Icons.alarm,
+        color: kDefaultBlackColor,
+      ),
       actions: [
-        const Icon(
+        Icon(
           Icons.settings,
           size: 30,
+          color: kDefaultBlackColor,
         ),
         SizedBox(
           width: 2.w,

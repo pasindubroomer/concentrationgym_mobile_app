@@ -47,7 +47,7 @@ class AppView extends StatelessWidget {
         overlayColor: Colors.white,
         overlayWidget: Center(
           child: SpinKitCircle(
-            color: kTextDefaultBlackColor,
+            color: kDefaultBlackColor,
             size: 25.0,
           ),
         ),

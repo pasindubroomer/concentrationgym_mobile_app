@@ -23,7 +23,7 @@ class DashboardForm extends StatelessWidget {
     return BlocListener<DashboardCubit, DashboardState>(
         child: SingleChildScrollView(
           child: Padding(
-            padding: kPadding,
+            padding: kPaddingDefault,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -70,8 +70,7 @@ class _ChallengeWidget extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 4.h, horizontal: 5.w),
       decoration: BoxDecoration(
-          color: kTextDefaultBlackColor,
-          borderRadius: BorderRadius.circular(10)),
+          color: kDefaultBlackColor, borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -106,7 +105,7 @@ class _ChallengeWidget extends StatelessWidget {
             child: Icon(
               Icons.hexagon,
               size: 50,
-              color: kTextDefaultWhiteColor,
+              color: kDefaultWhiteColor,
             ),
           )
         ],
