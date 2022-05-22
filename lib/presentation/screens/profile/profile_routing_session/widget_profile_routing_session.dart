@@ -49,8 +49,7 @@ class UserRoutingSessionHistory extends StatelessWidget {
                                         .format(state
                                             .userRoutingSessionHistoryModel![
                                                 index]
-                                            .date!
-                                            .toDate())
+                                            .date!)
                                         .toString(),
                                     style: Theme.of(context)
                                         .textTheme

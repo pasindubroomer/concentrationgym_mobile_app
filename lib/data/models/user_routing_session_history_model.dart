@@ -1,13 +1,24 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:equatable/equatable.dart';
+import 'package:hive/hive.dart';
 
+part 'user_routing_session_history_model.g.dart';
+
+@HiveType(typeId: 2)
 class UserRoutingSessionHistoryModel extends Equatable {
+  @HiveField(0)
   final String? uid;
+  @HiveField(1)
   final double? average;
-  final Timestamp? date;
+  @HiveField(2)
+  final DateTime? date;
+  @HiveField(3)
   final int? exerciseCount;
+  @HiveField(4)
   final double? longestRound;
+  @HiveField(5)
   final int? likes;
+  @HiveField(6)
   final int? sessionType;
 
   const UserRoutingSessionHistoryModel({
@@ -26,7 +37,7 @@ class UserRoutingSessionHistoryModel extends Equatable {
   UserRoutingSessionHistoryModel copyWith(
       {String? uid,
       double? average,
-      Timestamp? date,
+      DateTime? date,
       int? exerciseCount,
       double? longestRound,
       int? likes,
@@ -45,7 +56,7 @@ class UserRoutingSessionHistoryModel extends Equatable {
   factory UserRoutingSessionHistoryModel.fromJson(Map<String, dynamic> json) {
     return UserRoutingSessionHistoryModel(
       average: json['average'] as double?,
-      date: json['date'] as Timestamp?,
+      date: (json['date'] as Timestamp?)!.toDate(),
       exerciseCount: json['exercise_count'] as int?,
       longestRound: json['longest_round'] as double?,
       likes: json['likes'] as int?,

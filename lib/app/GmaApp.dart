@@ -1,8 +1,6 @@
 import 'package:concentrationgym_mobile_app/data/repositories/common_repository.dart';
 import 'package:concentrationgym_mobile_app/logic/bloc/bloc/app_bloc.dart';
-import 'package:concentrationgym_mobile_app/presentation/screens/dashboard/dashboard.dart';
 import 'package:concentrationgym_mobile_app/presentation/screens/login/login.dart';
-import 'package:concentrationgym_mobile_app/presentation/screens/user_profile/views/user_profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,7 +15,6 @@ import '../core/themes/app_theme.dart';
 import '../data/repositories/authentication_repository.dart';
 import '../data/repositories/firebase_storage_repository.dart';
 import '../presentation/router/router.dart';
-import '../presentation/screens/bio/sc_bio.dart';
 import '../presentation/screens/profile/sc_profile.dart';
 import '../presentation/screens/splash/sc_splash.dart';
 
