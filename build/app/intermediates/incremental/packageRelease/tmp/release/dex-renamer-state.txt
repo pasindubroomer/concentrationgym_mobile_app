@@ -1,4 +1,4 @@
-#Thu May 19 22:22:24 IST 2022
+#Sat May 21 18:13:20 IST 2022
 base.0=E\:\\Documents\\GitHub\\concentrationgym_mobile_app\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

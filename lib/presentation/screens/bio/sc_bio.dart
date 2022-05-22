@@ -1,4 +1,5 @@
 import 'package:concentrationgym_mobile_app/presentation/screens/bio/cubit/cubit/bio_cubit.dart';
+import 'package:concentrationgym_mobile_app/presentation/widgets/loading_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -31,8 +32,12 @@ class _BioScreenState extends State<BioScreen> {
         child: SafeArea(
             child: Scaffold(
                 appBar: AppBar(
-                  backgroundColor: Colors.white,
+                  backgroundColor: Colors.transparent,
                   elevation: 0,
+                  toolbarHeight: 5.h,
+                  iconTheme: const IconThemeData(
+                    color: Colors.black, //change your color here
+                  ),
                 ),
                 body: SingleChildScrollView(
                   child: Padding(
@@ -42,8 +47,8 @@ class _BioScreenState extends State<BioScreen> {
                       children: [
                         BlocListener<BioCubit, BioState>(
                           listener: (context, state) {
-                            if (state.processingState ==
-                                ProcessingStatus.submissionSuccess) {
+                            if (state.submissionState ==
+                                SubmissionStatus.success) {
                               ScaffoldMessenger.of(context)
                                 ..hideCurrentSnackBar()
                                 ..showSnackBar(
@@ -80,18 +85,11 @@ class _BioScreenState extends State<BioScreen> {
   }
 
   Widget _buildBioContent(BuildContext context, BioState state) {
-    if (state.processingState == ProcessingStatus.success ||
-        state.processingState == ProcessingStatus.submissionSuccess) {
+    if (state.processingState == ProcessingStatus.success) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Tell us about yourself",
-            style: Theme.of(context)
-                .textTheme
-                .headline4!
-                .copyWith(color: kTextBlackColor),
-          ),
+          _buildHeader(context),
           SizedBox(
             height: 4.h,
           ),
@@ -115,36 +113,11 @@ class _BioScreenState extends State<BioScreen> {
           SizedBox(
             height: 2.h,
           ),
-          GestureDetector(
-            onTap: () => context.read<BioCubit>().updateUserBioDetails(),
-            child: Container(
-              width: 100.w,
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(color: kDefaultBlueColor),
-              child: Text(
-                "Update",
-                textAlign: TextAlign.center,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(fontSize: 15),
-              ),
-            ),
-          )
+          _buildSubmitButton(context)
         ],
       );
     } else if (state.processingState == ProcessingStatus.loading) {
-      return Stack(
-        children: [
-          SizedBox(
-            width: 100.w,
-            height: 100.h,
-            child: const Center(
-              child: CircularProgressIndicator(),
-            ),
-          ),
-        ],
-      );
+      return const LoadingFull();
     } else if (state.processingState == ProcessingStatus.error) {
       return const Center(
         child: Text('Cannot load data'),
@@ -154,6 +127,35 @@ class _BioScreenState extends State<BioScreen> {
         child: Text('Unknown state'),
       );
     }
+  }
+
+  Text _buildHeader(BuildContext context) {
+    return Text(
+      "Tell us about yourself",
+      style: Theme.of(context)
+          .textTheme
+          .headline4!
+          .copyWith(color: kTextBlackColor),
+    );
+  }
+
+  GestureDetector _buildSubmitButton(BuildContext context) {
+    return GestureDetector(
+      onTap: () => context.read<BioCubit>().updateUserBioDetails(),
+      child: Container(
+        width: 100.w,
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(color: kDefaultBlueColor),
+        child: Text(
+          "SUBMIT",
+          textAlign: TextAlign.center,
+          style: Theme.of(context)
+              .textTheme
+              .headline6!
+              .copyWith(fontSize: 15, color: kTextWhiteColor),
+        ),
+      ),
+    );
   }
 
   Widget _buildTeam(BuildContext context, BioState state) {

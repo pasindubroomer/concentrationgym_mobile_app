@@ -13,27 +13,31 @@ class BioCubit extends Cubit<BioState> {
 
   void teamChanged(String value) {
     emit(state.copyWith(
+        submissionState: SubmissionStatus.valueChanged,
         userBioModel: state.userBioModel!.copyWith(team: value)));
   }
 
   void leagueChanged(String value) {
     emit(state.copyWith(
+        submissionState: SubmissionStatus.valueChanged,
         userBioModel: state.userBioModel!.copyWith(league: value)));
   }
 
   void favouriteGoalieChanged(String value) {
     emit(state.copyWith(
+        submissionState: SubmissionStatus.valueChanged,
         userBioModel: state.userBioModel!.copyWith(favouriteGoalie: value)));
   }
 
   void careerTargetsChanged(String value) {
     emit(state.copyWith(
+        submissionState: SubmissionStatus.valueChanged,
         userBioModel: state.userBioModel!.copyWith(careerTargets: value)));
   }
 
   void otherChanged(String value) {
-    print(value);
     emit(state.copyWith(
+        submissionState: SubmissionStatus.valueChanged,
         userBioModel: state.userBioModel!.copyWith(other: value)));
   }
 
@@ -55,9 +59,13 @@ class BioCubit extends Cubit<BioState> {
     try {
       await _commonRepository.updateUserBioDetails(
           "aipHwEhw9U1xqqQGU8oE", state.userBioModel!);
-      emit(state.copyWith(processingState: ProcessingStatus.submissionSuccess));
+      emit(state.copyWith(
+          processingState: ProcessingStatus.success,
+          submissionState: SubmissionStatus.success));
     } on Exception catch (_) {
-      emit(state.copyWith(processingState: ProcessingStatus.exception));
+      emit(state.copyWith(
+          processingState: ProcessingStatus.exception,
+          submissionState: SubmissionStatus.exception));
     }
   }
 }

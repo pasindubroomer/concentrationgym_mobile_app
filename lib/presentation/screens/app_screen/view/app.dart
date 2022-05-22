@@ -1,5 +1,4 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -58,10 +57,7 @@ class AppView extends StatelessWidget {
             theme: AppTheme.lightTheme,
             debugShowCheckedModeBanner: false,
             initialRoute: '/',
-            home: FlowBuilder<AppState>(
-              state: context.select((AppBloc bloc) => bloc.state),
-              onGeneratePages: onGenerateAppViewPages,
-            ),
+            home: Container(),
           ),
         ),
       );

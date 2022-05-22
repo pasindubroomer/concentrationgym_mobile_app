@@ -3,6 +3,8 @@ application
 INJECTED from E:\Documents\GitHub\concentrationgym_mobile_app\android\app\src\main\AndroidManifest.xml:3:4-33:19
 MERGED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
@@ -13,6 +15,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:26:5-71:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\c0fc708caaa4589bc487805750ad8901\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\c0fc708caaa4589bc487805750ad8901\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\7b04bf88720a07df5a93c0ee693619f5\jetified-firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:24:5-20
@@ -43,13 +47,18 @@ INJECTED from E:\Documents\GitHub\concentrationgym_mobile_app\android\app\src\ma
 MERGED from E:\Documents\GitHub\concentrationgym_mobile_app\android\app\src\main\AndroidManifest.xml:1:1-34:12
 MERGED from [:shared_preferences_android] E:\Documents\GitHub\concentrationgym_mobile_app\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:flutter_plugin_android_lifecycle] E:\Documents\GitHub\concentrationgym_mobile_app\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite] E:\Documents\GitHub\concentrationgym_mobile_app\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider_android] E:\Documents\GitHub\concentrationgym_mobile_app\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a3b86b42fafb2019c6d99a912992ce19\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:17:1-73:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\c0fc708caaa4589bc487805750ad8901\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\7b04bf88720a07df5a93c0ee693619f5\jetified-firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\b25e52f5739b5665d39d607baa2467f6\jetified-firebase-common-20.1.0\AndroidManifest.xml:15:1-40:12
@@ -115,10 +124,18 @@ MERGED from [:shared_preferences_android] E:\Documents\GitHub\concentrationgym_m
 MERGED from [:shared_preferences_android] E:\Documents\GitHub\concentrationgym_mobile_app\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] E:\Documents\GitHub\concentrationgym_mobile_app\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_plugin_android_lifecycle] E:\Documents\GitHub\concentrationgym_mobile_app\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] E:\Documents\GitHub\concentrationgym_mobile_app\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] E:\Documents\GitHub\concentrationgym_mobile_app\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] E:\Documents\GitHub\concentrationgym_mobile_app\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] E:\Documents\GitHub\concentrationgym_mobile_app\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a3b86b42fafb2019c6d99a912992ce19\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
@@ -129,6 +146,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\c0fc708caaa4589bc487805750ad8901\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\c0fc708caaa4589bc487805750ad8901\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0-beta06] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\7b04bf88720a07df5a93c0ee693619f5\jetified-firebase-appcheck-interop-16.0.0-beta06\AndroidManifest.xml:19:5-21:41
@@ -223,10 +242,14 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
 	android:name
 		ADDED from E:\Documents\GitHub\concentrationgym_mobile_app\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
@@ -235,6 +258,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\
 MERGED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\b25e52f5739b5665d39d607baa2467f6\jetified-firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
 MERGED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\b25e52f5739b5665d39d607baa2467f6\jetified-firebase-common-20.1.0\AndroidManifest.xml:33:9-37:35
 	android:exported
@@ -251,6 +276,12 @@ ADDED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\buil
 		ADDED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_auth] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_storage] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
 ADDED from [:cloud_firestore] E:\Documents\GitHub\concentrationgym_mobile_app\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
@@ -263,6 +294,22 @@ ADDED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\buil
 		ADDED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_core] E:\Documents\GitHub\concentrationgym_mobile_app\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+queries
+ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-15:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-72
+	android:name
+		ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:21-69
+data
+ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-44
+	android:mimeType
+		ADDED from [:file_picker] E:\Documents\GitHub\concentrationgym_mobile_app\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:19-41
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required
@@ -279,6 +326,8 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\bb034e126f121bd1853821de7e6d9777\jetified-grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\bb034e126f121bd1853821de7e6d9777\jetified-grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 	android:name
@@ -309,14 +358,6 @@ category#android.intent.category.BROWSABLE
 ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:37:17-78
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:37:27-75
-data
-ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:39:17-42:51
-	android:path
-		ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:41:21-37
-	android:host
-		ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:40:21-49
-	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:42:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
 ADDED from [com.google.firebase:firebase-auth:21.0.3] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\0cd31a8007b82ec10dce55ca37be1d81\jetified-firebase-auth-21.0.3\AndroidManifest.xml:45:9-62:20
 	android:excludeFromRecents
@@ -343,6 +384,12 @@ ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gra
 		ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:22:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:24.1.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\03a4bac28d3c7dac2475a64406193e79\jetified-firebase-firestore-24.1.1\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\a732609d39140ed999dd3f02f1a8340e\jetified-firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:20.1.0] C:\Users\Pasindu\.gradle\caches\transforms-2\files-2.1\b25e52f5739b5665d39d607baa2467f6\jetified-firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
 	android:authorities

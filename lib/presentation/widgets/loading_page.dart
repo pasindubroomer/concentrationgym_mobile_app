@@ -1,19 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:sizer/sizer.dart';
 
-class LoadingScreen extends StatelessWidget {
-  const LoadingScreen({Key? key}) : super(key: key);
+class LoadingFull extends StatelessWidget {
+  const LoadingFull({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 100.h,
-      width: 100.w,
-      child: SpinKitThreeBounce(
-        color: Colors.black,
-        size: 20.sp,
-      ),
+    return Stack(
+      children: [
+        SizedBox(
+          width: 100.w,
+          height: 100.h,
+          child: Center(
+            child: SizedBox(
+                width: 4.w,
+                height: 4.w,
+                child: const CircularProgressIndicator()),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class LoadingMini extends StatelessWidget {
+  const LoadingMini({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Center(
+          child: SizedBox(
+              width: 4.w,
+              height: 4.w,
+              child: const CircularProgressIndicator()),
+        ),
+      ],
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:concentrationgym_mobile_app/core/constants/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/constants/colors.dart';
 import 'cubit/profile_routing_session_cubit.dart';
@@ -39,16 +40,18 @@ class UserRoutingSessionHistory extends StatelessWidget {
                           Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const Icon(
+                                Icon(
                                   Icons.account_circle,
-                                  color: Colors.blue,
+                                  color: kDefaultBlueColor,
                                 ),
-                                Text("Pasindu Dulanjaya",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline6!
-                                        .copyWith(fontSize: 12.sp)),
-                                Text("12.39",
+                                Text(
+                                    DateFormat('yyyy-MM-dd hh:mm:ss')
+                                        .format(state
+                                            .userRoutingSessionHistoryModel![
+                                                index]
+                                            .date!
+                                            .toDate())
+                                        .toString(),
                                     style: Theme.of(context)
                                         .textTheme
                                         .headline6!

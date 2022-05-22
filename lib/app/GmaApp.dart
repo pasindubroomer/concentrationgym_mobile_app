@@ -15,6 +15,7 @@ import '../core/constants/colors.dart';
 import '../core/constants/enums.dart';
 import '../core/themes/app_theme.dart';
 import '../data/repositories/authentication_repository.dart';
+import '../data/repositories/firebase_storage_repository.dart';
 import '../presentation/router/router.dart';
 import '../presentation/screens/bio/sc_bio.dart';
 import '../presentation/screens/profile/sc_profile.dart';
@@ -54,7 +55,7 @@ class GMAApp extends StatelessWidget {
                 return const LoginPage();
               } else if (state.appAuthenticatedStatus ==
                   AppAuthenticatedStatus.authenticated) {
-                return const BioScreen();
+                return const ProfileScreen();
               }
               return const Center(child: Text('Unhandled State'));
             },
@@ -78,7 +79,9 @@ class GMAApp extends StatelessWidget {
         RepositoryProvider<AuthenticationRepository>(
             create: (context) => AuthenticationRepository()),
         RepositoryProvider<CommonRepository>(
-            create: (context) => CommonRepository())
+            create: (context) => CommonRepository()),
+        RepositoryProvider<FirebaseStorageRepository>(
+            create: (context) => FirebaseStorageRepository())
       ],
       child: MultiBlocProvider(
         providers: [

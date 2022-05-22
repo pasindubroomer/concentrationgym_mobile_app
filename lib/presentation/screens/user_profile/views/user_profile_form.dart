@@ -45,7 +45,7 @@ class UserProfileForm extends StatelessWidget {
                 builder: (context, state) {
                   if (state.loadingState == ProcessingStatus.loading) {
                     return const Center(
-                      child: LoadingScreen(),
+                      child: LoadingFull(),
                     );
                   } else if (state.loadingState == ProcessingStatus.error) {
                     return SizedBox(
@@ -83,7 +83,7 @@ class UserProfileForm extends StatelessWidget {
                 builder: (context, state) {
                   if (state.loadingState == ProcessingStatus.loading) {
                     return const Center(
-                      child: LoadingScreen(),
+                      child: LoadingFull(),
                     );
                   } else if (state.loadingState == ProcessingStatus.error) {
                     return SizedBox(
@@ -148,7 +148,7 @@ class UserProfileForm extends StatelessWidget {
                 builder: (context, state) {
                   if (state.loadingState == ProcessingStatus.loading) {
                     return const Center(
-                      child: LoadingScreen(),
+                      child: LoadingFull(),
                     );
                   } else if (state.toggleButtonSelectedIndex == 0) {
                     return Container();

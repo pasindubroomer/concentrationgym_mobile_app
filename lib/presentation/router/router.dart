@@ -1,3 +1,4 @@
+import 'package:concentrationgym_mobile_app/presentation/screens/bio/sc_bio.dart';
 import 'package:concentrationgym_mobile_app/presentation/screens/login/login.dart';
 import 'package:concentrationgym_mobile_app/presentation/screens/user_profile/views/user_profile_page.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,7 @@ class AppRouter {
   static const String SPLASH = '/splash';
   static const String LOGIN = '/login';
   static const String USER_PROFILE = '/user_profile';
-  static const String SHOW_INFO = '/show_info';
+  static const String BIO = '/bio';
   static const String BOOK_TIME_SLOT = '/book_time_slot';
   static const String BOOK_SEAT_TYPE = '/book_seat_type';
   static const String BOOK_SEAT_SLOT = '/book_seat_slot';
@@ -28,6 +29,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LoginPage());
       case USER_PROFILE:
         return MaterialPageRoute(builder: (_) => const UserProfiledPage());
+      case BIO:
+        return MaterialPageRoute(builder: (_) => const BioScreen());
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(

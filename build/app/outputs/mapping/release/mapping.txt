@@ -1,11 +1,11 @@
 # compiler: R8
 # compiler_version: 2.1.62
 # min_api: 21
-# pg_map_id: ffe8bd9
+# pg_map_id: bc4dc4c
 # common_typos_disable
 $$ServiceLoaderMethods -> a:
-    java.util.Iterator $load$16915() -> a
-    java.util.Iterator $load$17575() -> b
+    java.util.Iterator $load$17427() -> a
+    java.util.Iterator $load$18034() -> b
 $r8$backportedMethods$utility$Boolean$1$hashCode -> b:
     int hashCode(boolean) -> a
 $r8$backportedMethods$utility$Long$1$hashCode -> c:
@@ -18,28 +18,28 @@ androidx.activity.ComponentActivity -> androidx.activity.ComponentActivity:
     androidx.lifecycle.ViewModelStore mViewModelStore -> h
     androidx.lifecycle.LifecycleRegistry mLifecycleRegistry -> f
     androidx.lifecycle.Lifecycle getLifecycle() -> b
-    androidx.lifecycle.ViewModelStore getViewModelStore() -> g
+    androidx.lifecycle.ViewModelStore getViewModelStore() -> h
     androidx.activity.OnBackPressedDispatcher getOnBackPressedDispatcher() -> i
     androidx.savedstate.SavedStateRegistry getSavedStateRegistry() -> j
-    void access$001(androidx.activity.ComponentActivity) -> l
-    java.lang.Object onRetainCustomNonConfigurationInstance() -> m
+    void access$001(androidx.activity.ComponentActivity) -> m
+    java.lang.Object onRetainCustomNonConfigurationInstance() -> n
 androidx.activity.ComponentActivity$1 -> androidx.activity.ComponentActivity$a:
     androidx.activity.ComponentActivity this$0 -> e
 androidx.activity.ComponentActivity$2 -> androidx.activity.ComponentActivity$2:
-    androidx.activity.ComponentActivity this$0 -> a
+    androidx.activity.ComponentActivity this$0 -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.activity.ComponentActivity$3 -> androidx.activity.ComponentActivity$3:
-    androidx.activity.ComponentActivity this$0 -> a
+    androidx.activity.ComponentActivity this$0 -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.activity.ComponentActivity$NonConfigurationInstances -> androidx.activity.ComponentActivity$b:
     androidx.lifecycle.ViewModelStore viewModelStore -> b
     java.lang.Object custom -> a
 androidx.activity.ImmLeaksCleaner -> androidx.activity.ImmLeaksCleaner:
-    java.lang.reflect.Field sServedViewField -> d
-    java.lang.reflect.Field sNextServedViewField -> e
-    java.lang.reflect.Field sHField -> c
-    int sReflectedFieldsInitialized -> b
-    android.app.Activity mActivity -> a
+    android.app.Activity mActivity -> e
+    java.lang.reflect.Field sServedViewField -> h
+    java.lang.reflect.Field sNextServedViewField -> i
+    java.lang.reflect.Field sHField -> g
+    int sReflectedFieldsInitialized -> f
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
     void initializeReflectiveFields() -> h
 androidx.activity.OnBackPressedCallback -> androidx.activity.b:
@@ -58,14 +58,14 @@ androidx.activity.OnBackPressedDispatcher -> androidx.activity.OnBackPressedDisp
     androidx.activity.Cancellable addCancellableCallback(androidx.activity.OnBackPressedCallback) -> b
     void onBackPressed() -> c
 androidx.activity.OnBackPressedDispatcher$LifecycleOnBackPressedCancellable -> androidx.activity.OnBackPressedDispatcher$LifecycleOnBackPressedCancellable:
-    androidx.lifecycle.Lifecycle mLifecycle -> a
-    androidx.activity.OnBackPressedCallback mOnBackPressedCallback -> b
-    androidx.activity.OnBackPressedDispatcher this$0 -> d
-    androidx.activity.Cancellable mCurrentCancellable -> c
+    androidx.activity.OnBackPressedDispatcher this$0 -> h
+    androidx.activity.OnBackPressedCallback mOnBackPressedCallback -> f
+    androidx.lifecycle.Lifecycle mLifecycle -> e
+    androidx.activity.Cancellable mCurrentCancellable -> g
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.activity.OnBackPressedDispatcher$OnBackPressedCancellable -> androidx.activity.OnBackPressedDispatcher$a:
-    androidx.activity.OnBackPressedCallback mOnBackPressedCallback -> a
-    androidx.activity.OnBackPressedDispatcher this$0 -> b
+    androidx.activity.OnBackPressedDispatcher this$0 -> f
+    androidx.activity.OnBackPressedCallback mOnBackPressedCallback -> e
 androidx.activity.OnBackPressedDispatcherOwner -> androidx.activity.c:
     androidx.activity.OnBackPressedDispatcher getOnBackPressedDispatcher() -> i
 androidx.arch.core.executor.ArchTaskExecutor -> d.a.a.a.a:
@@ -284,10 +284,19 @@ androidx.core.R$id -> d.d.a:
     int tag_accessibility_pane_title -> a
 androidx.core.app.ActivityCompat -> androidx.core.app.a:
     androidx.core.app.ActivityCompat$PermissionCompatDelegate sDelegate -> a
-    androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate() -> d
-    void startActivityForResult(android.app.Activity,android.content.Intent,int,android.os.Bundle) -> e
-androidx.core.app.ActivityCompat$PermissionCompatDelegate -> androidx.core.app.a$a:
-    boolean onActivityResult(android.app.Activity,int,int,android.content.Intent) -> a
+    androidx.core.app.ActivityCompat$PermissionCompatDelegate getPermissionCompatDelegate() -> e
+    void requestPermissions(android.app.Activity,java.lang.String[],int) -> f
+    void startActivityForResult(android.app.Activity,android.content.Intent,int,android.os.Bundle) -> g
+androidx.core.app.ActivityCompat$1 -> androidx.core.app.a$a:
+    android.app.Activity val$activity -> f
+    java.lang.String[] val$permissions -> e
+    int val$requestCode -> g
+androidx.core.app.ActivityCompat$OnRequestPermissionsResultCallback -> androidx.core.app.a$b:
+androidx.core.app.ActivityCompat$PermissionCompatDelegate -> androidx.core.app.a$c:
+    boolean requestPermissions(android.app.Activity,java.lang.String[],int) -> a
+    boolean onActivityResult(android.app.Activity,int,int,android.content.Intent) -> b
+androidx.core.app.ActivityCompat$RequestPermissionsRequestCodeValidator -> androidx.core.app.a$d:
+    void validateRequestPermissionsRequestCode(int) -> c
 androidx.core.app.BundleCompat -> androidx.core.app.b:
     void putBinder(android.os.Bundle,java.lang.String,android.os.IBinder) -> a
 androidx.core.app.BundleCompat$BundleCompatBaseImpl -> androidx.core.app.b$a:
@@ -296,7 +305,7 @@ androidx.core.app.BundleCompat$BundleCompatBaseImpl -> androidx.core.app.b$a:
     void putBinder(android.os.Bundle,java.lang.String,android.os.IBinder) -> a
 androidx.core.app.ComponentActivity -> androidx.core.app.c:
     androidx.lifecycle.LifecycleRegistry mLifecycleRegistry -> e
-    boolean superDispatchKeyEvent(android.view.KeyEvent) -> e
+    boolean superDispatchKeyEvent(android.view.KeyEvent) -> f
 androidx.core.app.CoreComponentFactory -> androidx.core.app.CoreComponentFactory:
     java.lang.Object checkCompatWrapper(java.lang.Object) -> a
 androidx.core.app.CoreComponentFactory$CompatWrapped -> androidx.core.app.CoreComponentFactory$a:
@@ -481,9 +490,10 @@ androidx.core.app.SharedElementCallback -> androidx.core.app.j:
     void onSharedElementEnd(java.util.List,java.util.List,java.util.List) -> b
     void onSharedElementStart(java.util.List,java.util.List,java.util.List) -> c
 androidx.core.content.ContextCompat -> d.d.b.a:
-    android.content.Context createDeviceProtectedStorageContext(android.content.Context) -> a
-    java.util.concurrent.Executor getMainExecutor(android.content.Context) -> b
-    void startActivity(android.content.Context,android.content.Intent,android.os.Bundle) -> c
+    int checkSelfPermission(android.content.Context,java.lang.String) -> a
+    android.content.Context createDeviceProtectedStorageContext(android.content.Context) -> b
+    java.util.concurrent.Executor getMainExecutor(android.content.Context) -> c
+    void startActivity(android.content.Context,android.content.Intent,android.os.Bundle) -> d
 androidx.core.content.ContextCompat$Api16Impl -> d.d.b.a$a:
     void startActivities(android.content.Context,android.content.Intent[],android.os.Bundle) -> a
     void startActivity(android.content.Context,android.content.Intent,android.os.Bundle) -> b
@@ -571,7 +581,7 @@ androidx.core.view.KeyEventDispatcher -> d.d.e.a:
     boolean dispatchKeyEvent(androidx.core.view.KeyEventDispatcher$Component,android.view.View,android.view.Window$Callback,android.view.KeyEvent) -> e
     android.content.DialogInterface$OnKeyListener getDialogKeyListenerPre28(android.app.Dialog) -> f
 androidx.core.view.KeyEventDispatcher$Component -> d.d.e.a$a:
-    boolean superDispatchKeyEvent(android.view.KeyEvent) -> e
+    boolean superDispatchKeyEvent(android.view.KeyEvent) -> f
 androidx.core.view.LayoutInflaterCompat -> d.d.e.b:
     java.lang.reflect.Field sLayoutInflaterFactory2Field -> a
     boolean sCheckedField -> b
@@ -838,10 +848,10 @@ androidx.fragment.app.Fragment -> androidx.fragment.app.Fragment:
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> f
     android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> f0
     void setAnimatingAway(android.view.View) -> f1
-    androidx.lifecycle.ViewModelStore getViewModelStore() -> g
+    androidx.fragment.app.Fragment$AnimationInfo ensureAnimationInfo() -> g
     void onDestroy() -> g0
     void setAnimator(android.animation.Animator) -> g1
-    androidx.fragment.app.Fragment$AnimationInfo ensureAnimationInfo() -> h
+    androidx.lifecycle.ViewModelStore getViewModelStore() -> h
     void onDestroyOptionsMenu() -> h0
     void setArguments(android.os.Bundle) -> h1
     void onDestroyView() -> i0
@@ -887,7 +897,7 @@ androidx.fragment.app.Fragment -> androidx.fragment.app.Fragment:
     int getNextAnim() -> z
     void onStop() -> z0
 androidx.fragment.app.Fragment$2 -> androidx.fragment.app.Fragment$2:
-    androidx.fragment.app.Fragment this$0 -> a
+    androidx.fragment.app.Fragment this$0 -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.fragment.app.Fragment$3 -> androidx.fragment.app.Fragment$a:
     androidx.fragment.app.Fragment this$0 -> e
@@ -924,28 +934,30 @@ androidx.fragment.app.FragmentActivity -> androidx.fragment.app.d:
     androidx.lifecycle.LifecycleRegistry mFragmentLifecycleRegistry -> l
     boolean mResumed -> n
     boolean mStopped -> o
-    boolean mStartedIntentSenderFromFragment -> p
-    androidx.collection.SparseArrayCompat mPendingFragmentActivityResults -> s
+    boolean mRequestedPermissionsFromFragment -> p
+    androidx.collection.SparseArrayCompat mPendingFragmentActivityResults -> t
     androidx.fragment.app.FragmentController mFragments -> k
-    boolean mStartedActivityFromFragment -> q
-    int mNextCandidateRequestIndex -> r
-    int allocateRequestIndex(androidx.fragment.app.Fragment) -> n
-    void checkForValidRequestCode(int) -> o
-    android.view.View dispatchFragmentsOnCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> p
-    androidx.fragment.app.FragmentManager getSupportFragmentManager() -> q
-    void markFragmentsCreated() -> r
-    boolean markState(androidx.fragment.app.FragmentManager,androidx.lifecycle.Lifecycle$State) -> s
-    void onAttachFragment(androidx.fragment.app.Fragment) -> t
-    boolean onPrepareOptionsPanel(android.view.View,android.view.Menu) -> u
-    void onResumeFragments() -> v
-    void startActivityFromFragment(androidx.fragment.app.Fragment,android.content.Intent,int,android.os.Bundle) -> w
-    void supportInvalidateOptionsMenu() -> x
+    boolean mStartedIntentSenderFromFragment -> q
+    boolean mStartedActivityFromFragment -> r
+    int mNextCandidateRequestIndex -> s
+    void validateRequestPermissionsRequestCode(int) -> c
+    int allocateRequestIndex(androidx.fragment.app.Fragment) -> o
+    void checkForValidRequestCode(int) -> p
+    android.view.View dispatchFragmentsOnCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> q
+    androidx.fragment.app.FragmentManager getSupportFragmentManager() -> r
+    void markFragmentsCreated() -> s
+    boolean markState(androidx.fragment.app.FragmentManager,androidx.lifecycle.Lifecycle$State) -> t
+    void onAttachFragment(androidx.fragment.app.Fragment) -> u
+    boolean onPrepareOptionsPanel(android.view.View,android.view.Menu) -> v
+    void onResumeFragments() -> w
+    void startActivityFromFragment(androidx.fragment.app.Fragment,android.content.Intent,int,android.os.Bundle) -> x
+    void supportInvalidateOptionsMenu() -> y
 androidx.fragment.app.FragmentActivity$HostCallbacks -> androidx.fragment.app.d$a:
     androidx.fragment.app.FragmentActivity this$0 -> j
     androidx.lifecycle.Lifecycle getLifecycle() -> b
     android.view.View onFindViewById(int) -> c
     boolean onHasView() -> d
-    androidx.lifecycle.ViewModelStore getViewModelStore() -> g
+    androidx.lifecycle.ViewModelStore getViewModelStore() -> h
     androidx.activity.OnBackPressedDispatcher getOnBackPressedDispatcher() -> i
     void onAttachFragment(androidx.fragment.app.Fragment) -> k
     void onDump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> l
@@ -1004,7 +1016,7 @@ androidx.fragment.app.FragmentHostCallback -> androidx.fragment.app.h:
     boolean onHasView() -> d
     android.app.Activity getActivity() -> e
     android.content.Context getContext() -> f
-    android.os.Handler getHandler() -> h
+    android.os.Handler getHandler() -> g
     void onAttachFragment(androidx.fragment.app.Fragment) -> k
     void onDump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> l
     java.lang.Object onGetHost() -> m
@@ -1503,7 +1515,7 @@ androidx.lifecycle.ClassesInfoCache$MethodReference -> androidx.lifecycle.a$b:
     java.lang.reflect.Method mMethod -> b
     void invokeCallback(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event,java.lang.Object) -> a
 androidx.lifecycle.CompositeGeneratedAdaptersObserver -> androidx.lifecycle.CompositeGeneratedAdaptersObserver:
-    androidx.lifecycle.GeneratedAdapter[] mGeneratedAdapters -> a
+    androidx.lifecycle.GeneratedAdapter[] mGeneratedAdapters -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.lifecycle.FullLifecycleObserver -> androidx.lifecycle.b:
     void onResume(androidx.lifecycle.LifecycleOwner) -> a
@@ -1513,8 +1525,8 @@ androidx.lifecycle.FullLifecycleObserver -> androidx.lifecycle.b:
     void onStop(androidx.lifecycle.LifecycleOwner) -> f
     void onStart(androidx.lifecycle.LifecycleOwner) -> g
 androidx.lifecycle.FullLifecycleObserverAdapter -> androidx.lifecycle.FullLifecycleObserverAdapter:
-    androidx.lifecycle.FullLifecycleObserver mFullLifecycleObserver -> a
-    androidx.lifecycle.LifecycleEventObserver mLifecycleEventObserver -> b
+    androidx.lifecycle.FullLifecycleObserver mFullLifecycleObserver -> e
+    androidx.lifecycle.LifecycleEventObserver mLifecycleEventObserver -> f
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.lifecycle.FullLifecycleObserverAdapter$1 -> androidx.lifecycle.FullLifecycleObserverAdapter$a:
     int[] $SwitchMap$androidx$lifecycle$Lifecycle$Event -> a
@@ -1584,7 +1596,7 @@ androidx.lifecycle.Lifecycling -> androidx.lifecycle.j:
     androidx.lifecycle.LifecycleEventObserver lifecycleEventObserver(java.lang.Object) -> f
     int resolveObserverCallbackType(java.lang.Class) -> g
 androidx.lifecycle.Lifecycling$1 -> androidx.lifecycle.Lifecycling$1:
-    androidx.lifecycle.LifecycleEventObserver val$observer -> a
+    androidx.lifecycle.LifecycleEventObserver val$observer -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.lifecycle.LiveData -> androidx.lifecycle.LiveData:
     java.lang.Object NOT_SET -> i
@@ -1605,17 +1617,17 @@ androidx.lifecycle.LiveData -> androidx.lifecycle.LiveData:
     void removeObserver(androidx.lifecycle.Observer) -> g
     void setValue(java.lang.Object) -> h
 androidx.lifecycle.LiveData$LifecycleBoundObserver -> androidx.lifecycle.LiveData$LifecycleBoundObserver:
-    androidx.lifecycle.LiveData this$0 -> f
-    androidx.lifecycle.LifecycleOwner mOwner -> e
+    androidx.lifecycle.LiveData this$0 -> j
+    androidx.lifecycle.LifecycleOwner mOwner -> i
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
     void detachObserver() -> i
     boolean isAttachedTo(androidx.lifecycle.LifecycleOwner) -> j
     boolean shouldBeActive() -> k
 androidx.lifecycle.LiveData$ObserverWrapper -> androidx.lifecycle.LiveData$a:
-    androidx.lifecycle.Observer mObserver -> a
-    androidx.lifecycle.LiveData this$0 -> d
-    boolean mActive -> b
-    int mLastVersion -> c
+    androidx.lifecycle.Observer mObserver -> e
+    boolean mActive -> f
+    int mLastVersion -> g
+    androidx.lifecycle.LiveData this$0 -> h
     void activeStateChanged(boolean) -> h
     void detachObserver() -> i
     boolean isAttachedTo(androidx.lifecycle.LifecycleOwner) -> j
@@ -1627,8 +1639,8 @@ androidx.lifecycle.Observer -> androidx.lifecycle.m:
     void onChanged(java.lang.Object) -> a
 androidx.lifecycle.OnLifecycleEvent -> androidx.lifecycle.n:
 androidx.lifecycle.ReflectiveGenericLifecycleObserver -> androidx.lifecycle.ReflectiveGenericLifecycleObserver:
-    androidx.lifecycle.ClassesInfoCache$CallbackInfo mInfo -> b
-    java.lang.Object mWrapped -> a
+    java.lang.Object mWrapped -> e
+    androidx.lifecycle.ClassesInfoCache$CallbackInfo mInfo -> f
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.lifecycle.ReportFragment -> androidx.lifecycle.o:
     androidx.lifecycle.ReportFragment$ActivityInitializationListener mProcessListener -> e
@@ -1644,7 +1656,7 @@ androidx.lifecycle.ReportFragment$ActivityInitializationListener -> androidx.lif
     void onStart() -> c
 androidx.lifecycle.ReportFragment$LifecycleCallbacks -> androidx.lifecycle.o$b:
 androidx.lifecycle.SingleGeneratedAdapterObserver -> androidx.lifecycle.SingleGeneratedAdapterObserver:
-    androidx.lifecycle.GeneratedAdapter mGeneratedAdapter -> a
+    androidx.lifecycle.GeneratedAdapter mGeneratedAdapter -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.lifecycle.ViewModel -> androidx.lifecycle.p:
     java.util.Map mBagOfTags -> a
@@ -1667,7 +1679,7 @@ androidx.lifecycle.ViewModelStore -> androidx.lifecycle.r:
     androidx.lifecycle.ViewModel get(java.lang.String) -> b
     void put(java.lang.String,androidx.lifecycle.ViewModel) -> c
 androidx.lifecycle.ViewModelStoreOwner -> androidx.lifecycle.s:
-    androidx.lifecycle.ViewModelStore getViewModelStore() -> g
+    androidx.lifecycle.ViewModelStore getViewModelStore() -> h
 androidx.loader.app.LoaderManager -> d.e.a.a:
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
     androidx.loader.app.LoaderManager getInstance(androidx.lifecycle.LifecycleOwner) -> b
@@ -1732,7 +1744,7 @@ androidx.localbroadcastmanager.content.LocalBroadcastManager$ReceiverRecord -> d
     boolean broadcasting -> c
     boolean dead -> d
 androidx.savedstate.Recreator -> androidx.savedstate.Recreator:
-    androidx.savedstate.SavedStateRegistryOwner mOwner -> a
+    androidx.savedstate.SavedStateRegistryOwner mOwner -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
     void reflectiveNew(java.lang.String) -> h
 androidx.savedstate.SavedStateRegistry -> androidx.savedstate.SavedStateRegistry:
@@ -1744,7 +1756,7 @@ androidx.savedstate.SavedStateRegistry -> androidx.savedstate.SavedStateRegistry
     void performRestore(androidx.lifecycle.Lifecycle,android.os.Bundle) -> b
     void performSave(android.os.Bundle) -> c
 androidx.savedstate.SavedStateRegistry$1 -> androidx.savedstate.SavedStateRegistry$1:
-    androidx.savedstate.SavedStateRegistry this$0 -> a
+    androidx.savedstate.SavedStateRegistry this$0 -> e
     void onStateChanged(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event) -> d
 androidx.savedstate.SavedStateRegistry$AutoRecreated -> androidx.savedstate.SavedStateRegistry$a:
     void onRecreated(androidx.savedstate.SavedStateRegistryOwner) -> a
@@ -2135,20 +2147,22 @@ com.google.android.gms.common.api.Scope -> com.google.android.gms.common.api.Sco
 com.google.android.gms.common.api.Status -> com.google.android.gms.common.api.Status:
     java.lang.String zzd -> g
     android.app.PendingIntent zze -> h
-    com.google.android.gms.common.api.Status RESULT_CANCELED -> m
+    com.google.android.gms.common.api.Status RESULT_TIMEOUT -> m
     int zzc -> f
     com.google.android.gms.common.ConnectionResult zzf -> i
-    com.google.android.gms.common.api.Status RESULT_TIMEOUT -> l
+    com.google.android.gms.common.api.Status RESULT_INTERNAL_ERROR -> l
     com.google.android.gms.common.api.Status RESULT_INTERRUPTED -> k
     com.google.android.gms.common.api.Status RESULT_SUCCESS -> j
     int zzb -> e
+    com.google.android.gms.common.api.Status RESULT_CANCELED -> n
     java.lang.String zza() -> a
     com.google.android.gms.common.api.Status getStatus() -> i0
     com.google.android.gms.common.ConnectionResult getConnectionResult() -> j0
     int getStatusCode() -> k0
     java.lang.String getStatusMessage() -> l0
     boolean hasResolution() -> m0
-    boolean isSuccess() -> n0
+    boolean isCanceled() -> n0
+    boolean isSuccess() -> o0
 com.google.android.gms.common.api.TransformedResult -> com.google.android.gms.common.api.m:
 com.google.android.gms.common.api.UnsupportedApiCallException -> com.google.android.gms.common.api.n:
     com.google.android.gms.common.Feature zza -> e
@@ -3295,12 +3309,14 @@ com.google.android.gms.common.util.Base64Utils -> com.google.android.gms.common.
     java.lang.String encodeUrlSafeNoPadding(byte[]) -> e
 com.google.android.gms.common.util.Clock -> com.google.android.gms.common.util.d:
     long currentTimeMillis() -> a
+    long elapsedRealtime() -> b
 com.google.android.gms.common.util.CrashUtils -> com.google.android.gms.common.util.e:
     boolean addDynamiteErrorToDropBox(android.content.Context,java.lang.Throwable) -> a
 com.google.android.gms.common.util.DefaultClock -> com.google.android.gms.common.util.f:
     com.google.android.gms.common.util.DefaultClock zza -> a
     long currentTimeMillis() -> a
-    com.google.android.gms.common.util.Clock getInstance() -> b
+    long elapsedRealtime() -> b
+    com.google.android.gms.common.util.Clock getInstance() -> c
 com.google.android.gms.common.util.DeviceProperties -> com.google.android.gms.common.util.g:
     java.lang.Boolean zzg -> c
     java.lang.Boolean zzi -> d
@@ -6400,11 +6416,11 @@ com.google.android.gms.internal.firebase-auth-api.zztl -> e.a.a.a.d.d.kk:
 com.google.android.gms.internal.firebase-auth-api.zztm -> e.a.a.a.d.d.lk:
     com.google.android.gms.common.logging.Logger zza -> a
     android.content.Context zza() -> a
-    android.net.Uri$Builder zzb(android.content.Intent,java.lang.String,java.lang.String) -> c
-    java.lang.String zzc(java.lang.String) -> d
-    java.net.HttpURLConnection zzd(java.net.URL) -> f
-    void zze(java.lang.String,com.google.android.gms.common.api.Status) -> h
-    void zzf(android.net.Uri,java.lang.String) -> k
+    android.net.Uri$Builder zzb(android.content.Intent,java.lang.String,java.lang.String) -> d
+    java.lang.String zzc(java.lang.String) -> e
+    java.net.HttpURLConnection zzd(java.net.URL) -> g
+    void zze(java.lang.String,com.google.android.gms.common.api.Status) -> k
+    void zzf(android.net.Uri,java.lang.String) -> l
 com.google.android.gms.internal.firebase-auth-api.zztn -> e.a.a.a.d.d.mk:
     java.lang.Boolean zza -> a
     boolean zza(android.content.Context) -> a
@@ -7891,64 +7907,79 @@ com.google.android.gms.signin.zae -> e.a.a.a.g.g:
     void zab() -> m
     void zad(com.google.android.gms.signin.internal.zae) -> o
 com.google.android.gms.signin.zaf -> e.a.a.a.g.h:
-com.google.android.gms.tasks.Continuation -> e.a.a.a.h.a:
+com.google.android.gms.tasks.CancellationToken -> e.a.a.a.h.a:
+    com.google.android.gms.tasks.CancellationToken onCanceledRequested(com.google.android.gms.tasks.OnTokenCanceledListener) -> a
+com.google.android.gms.tasks.CancellationTokenSource -> e.a.a.a.h.b:
+    com.google.android.gms.tasks.zzb zza -> a
+    void cancel() -> a
+    com.google.android.gms.tasks.CancellationToken getToken() -> b
+com.google.android.gms.tasks.Continuation -> e.a.a.a.h.c:
     java.lang.Object then(com.google.android.gms.tasks.Task) -> a
-com.google.android.gms.tasks.DuplicateTaskCompletionException -> e.a.a.a.h.b:
+com.google.android.gms.tasks.DuplicateTaskCompletionException -> e.a.a.a.h.d:
     java.lang.IllegalStateException of(com.google.android.gms.tasks.Task) -> a
-com.google.android.gms.tasks.OnCanceledListener -> e.a.a.a.h.c:
+com.google.android.gms.tasks.OnCanceledListener -> e.a.a.a.h.e:
     void onCanceled() -> a
-com.google.android.gms.tasks.OnCompleteListener -> e.a.a.a.h.d:
+com.google.android.gms.tasks.OnCompleteListener -> e.a.a.a.h.f:
     void onComplete(com.google.android.gms.tasks.Task) -> a
-com.google.android.gms.tasks.OnFailureListener -> e.a.a.a.h.e:
+com.google.android.gms.tasks.OnFailureListener -> e.a.a.a.h.g:
     void onFailure(java.lang.Exception) -> b
-com.google.android.gms.tasks.OnSuccessListener -> e.a.a.a.h.f:
+com.google.android.gms.tasks.OnSuccessListener -> e.a.a.a.h.h:
     void onSuccess(java.lang.Object) -> d
-com.google.android.gms.tasks.RuntimeExecutionException -> e.a.a.a.h.g:
-com.google.android.gms.tasks.Task -> e.a.a.a.h.h:
-    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> a
-    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> b
-    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> c
-    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> d
-    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> e
-    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> f
-    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> g
-    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> h
-    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> i
-    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> j
-    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> k
-    java.lang.Exception getException() -> l
-    java.lang.Object getResult() -> m
-    boolean isCanceled() -> n
-    boolean isComplete() -> o
-    boolean isSuccessful() -> p
-com.google.android.gms.tasks.TaskCompletionSource -> e.a.a.a.h.i:
+com.google.android.gms.tasks.OnTokenCanceledListener -> e.a.a.a.h.i:
+    void onCanceled() -> a
+com.google.android.gms.tasks.RuntimeExecutionException -> e.a.a.a.h.j:
+com.google.android.gms.tasks.Task -> e.a.a.a.h.k:
+    com.google.android.gms.tasks.Task addOnCanceledListener(com.google.android.gms.tasks.OnCanceledListener) -> a
+    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> b
+    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> c
+    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> d
+    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> e
+    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> f
+    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> g
+    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> h
+    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> i
+    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> j
+    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> k
+    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> l
+    java.lang.Exception getException() -> m
+    java.lang.Object getResult() -> n
+    boolean isCanceled() -> o
+    boolean isComplete() -> p
+    boolean isSuccessful() -> q
+com.google.android.gms.tasks.TaskCompletionSource -> e.a.a.a.h.l:
     com.google.android.gms.tasks.zzw zza -> a
     com.google.android.gms.tasks.Task getTask() -> a
     void setException(java.lang.Exception) -> b
     void setResult(java.lang.Object) -> c
     boolean trySetException(java.lang.Exception) -> d
     boolean trySetResult(java.lang.Object) -> e
-com.google.android.gms.tasks.TaskExecutors -> e.a.a.a.h.j:
+    com.google.android.gms.tasks.zzw zza(com.google.android.gms.tasks.TaskCompletionSource) -> f
+com.google.android.gms.tasks.TaskExecutors -> e.a.a.a.h.m:
     java.util.concurrent.Executor MAIN_THREAD -> a
     java.util.concurrent.Executor zza -> b
-com.google.android.gms.tasks.Tasks -> e.a.a.a.h.k:
+com.google.android.gms.tasks.Tasks -> e.a.a.a.h.n:
     java.lang.Object await(com.google.android.gms.tasks.Task) -> a
-    com.google.android.gms.tasks.Task call(java.util.concurrent.Executor,java.util.concurrent.Callable) -> b
-    com.google.android.gms.tasks.Task forException(java.lang.Exception) -> c
-    com.google.android.gms.tasks.Task forResult(java.lang.Object) -> d
-    com.google.android.gms.tasks.Task whenAll(java.util.Collection) -> e
-    com.google.android.gms.tasks.Task whenAll(com.google.android.gms.tasks.Task[]) -> f
-    java.lang.Object zza(com.google.android.gms.tasks.Task) -> g
-    void zzb(com.google.android.gms.tasks.Task,com.google.android.gms.tasks.zzae) -> h
-com.google.android.gms.tasks.zzac -> e.a.a.a.h.l:
-com.google.android.gms.tasks.zzad -> e.a.a.a.h.m:
+    java.lang.Object await(com.google.android.gms.tasks.Task,long,java.util.concurrent.TimeUnit) -> b
+    com.google.android.gms.tasks.Task call(java.util.concurrent.Executor,java.util.concurrent.Callable) -> c
+    com.google.android.gms.tasks.Task forException(java.lang.Exception) -> d
+    com.google.android.gms.tasks.Task forResult(java.lang.Object) -> e
+    com.google.android.gms.tasks.Task whenAll(java.util.Collection) -> f
+    com.google.android.gms.tasks.Task whenAll(com.google.android.gms.tasks.Task[]) -> g
+    java.lang.Object zza(com.google.android.gms.tasks.Task) -> h
+    void zzb(com.google.android.gms.tasks.Task,com.google.android.gms.tasks.zzae) -> i
+com.google.android.gms.tasks.zza -> e.a.a.a.h.o:
+    com.google.android.gms.tasks.OnTokenCanceledListener zza -> a
+    void onSuccess(java.lang.Object) -> d
+com.google.android.gms.tasks.zzac -> e.a.a.a.h.p:
+com.google.android.gms.tasks.zzad -> e.a.a.a.h.q:
     java.util.concurrent.CountDownLatch zza -> a
     void onCanceled() -> a
     void onFailure(java.lang.Exception) -> b
     void zza() -> c
     void onSuccess(java.lang.Object) -> d
-com.google.android.gms.tasks.zzae -> e.a.a.a.h.n:
-com.google.android.gms.tasks.zzaf -> e.a.a.a.h.o:
+    boolean zzb(long,java.util.concurrent.TimeUnit) -> e
+com.google.android.gms.tasks.zzae -> e.a.a.a.h.r:
+com.google.android.gms.tasks.zzaf -> e.a.a.a.h.s:
     java.lang.Exception zzg -> g
     com.google.android.gms.tasks.zzw zzc -> c
     int zzf -> f
@@ -7961,20 +7992,24 @@ com.google.android.gms.tasks.zzaf -> e.a.a.a.h.o:
     void onFailure(java.lang.Exception) -> b
     void zza() -> c
     void onSuccess(java.lang.Object) -> d
-com.google.android.gms.tasks.zzc -> e.a.a.a.h.p:
+com.google.android.gms.tasks.zzb -> e.a.a.a.h.t:
+    com.google.android.gms.tasks.zzw zza -> a
+    com.google.android.gms.tasks.CancellationToken onCanceledRequested(com.google.android.gms.tasks.OnTokenCanceledListener) -> a
+    void zza() -> b
+com.google.android.gms.tasks.zzc -> e.a.a.a.h.u:
     com.google.android.gms.tasks.zzd zzb -> f
     com.google.android.gms.tasks.Task zza -> e
-com.google.android.gms.tasks.zzd -> e.a.a.a.h.q:
+com.google.android.gms.tasks.zzd -> e.a.a.a.h.v:
     com.google.android.gms.tasks.zzw zzc -> c
     java.util.concurrent.Executor zza -> a
     com.google.android.gms.tasks.Continuation zzb -> b
     com.google.android.gms.tasks.Continuation zza(com.google.android.gms.tasks.zzd) -> a
     com.google.android.gms.tasks.zzw zzb(com.google.android.gms.tasks.zzd) -> b
     void zzd(com.google.android.gms.tasks.Task) -> c
-com.google.android.gms.tasks.zze -> e.a.a.a.h.r:
+com.google.android.gms.tasks.zze -> e.a.a.a.h.w:
     com.google.android.gms.tasks.zzf zzb -> f
     com.google.android.gms.tasks.Task zza -> e
-com.google.android.gms.tasks.zzf -> e.a.a.a.h.s:
+com.google.android.gms.tasks.zzf -> e.a.a.a.h.x:
     com.google.android.gms.tasks.zzw zzc -> c
     java.util.concurrent.Executor zza -> a
     com.google.android.gms.tasks.Continuation zzb -> b
@@ -7984,89 +8019,93 @@ com.google.android.gms.tasks.zzf -> e.a.a.a.h.s:
     void onSuccess(java.lang.Object) -> d
     com.google.android.gms.tasks.Continuation zza(com.google.android.gms.tasks.zzf) -> e
     com.google.android.gms.tasks.zzw zzb(com.google.android.gms.tasks.zzf) -> f
-com.google.android.gms.tasks.zzg -> e.a.a.a.h.t:
+com.google.android.gms.tasks.zzg -> e.a.a.a.h.y:
     com.google.android.gms.tasks.zzh zza -> e
-com.google.android.gms.tasks.zzh -> e.a.a.a.h.u:
+com.google.android.gms.tasks.zzh -> e.a.a.a.h.z:
     java.util.concurrent.Executor zza -> a
     java.lang.Object zzb -> b
     com.google.android.gms.tasks.OnCanceledListener zzc -> c
     com.google.android.gms.tasks.OnCanceledListener zza(com.google.android.gms.tasks.zzh) -> a
     java.lang.Object zzb(com.google.android.gms.tasks.zzh) -> b
     void zzd(com.google.android.gms.tasks.Task) -> c
-com.google.android.gms.tasks.zzi -> e.a.a.a.h.v:
+com.google.android.gms.tasks.zzi -> e.a.a.a.h.a0:
     com.google.android.gms.tasks.zzj zzb -> f
     com.google.android.gms.tasks.Task zza -> e
-com.google.android.gms.tasks.zzj -> e.a.a.a.h.w:
+com.google.android.gms.tasks.zzj -> e.a.a.a.h.b0:
     java.util.concurrent.Executor zza -> a
     java.lang.Object zzb -> b
     com.google.android.gms.tasks.OnCompleteListener zzc -> c
     com.google.android.gms.tasks.OnCompleteListener zza(com.google.android.gms.tasks.zzj) -> a
     java.lang.Object zzb(com.google.android.gms.tasks.zzj) -> b
     void zzd(com.google.android.gms.tasks.Task) -> c
-com.google.android.gms.tasks.zzk -> e.a.a.a.h.x:
+com.google.android.gms.tasks.zzk -> e.a.a.a.h.c0:
     com.google.android.gms.tasks.zzl zzb -> f
     com.google.android.gms.tasks.Task zza -> e
-com.google.android.gms.tasks.zzl -> e.a.a.a.h.y:
+com.google.android.gms.tasks.zzl -> e.a.a.a.h.d0:
     java.util.concurrent.Executor zza -> a
     com.google.android.gms.tasks.OnFailureListener zzc -> c
     java.lang.Object zzb -> b
     com.google.android.gms.tasks.OnFailureListener zza(com.google.android.gms.tasks.zzl) -> a
     java.lang.Object zzb(com.google.android.gms.tasks.zzl) -> b
     void zzd(com.google.android.gms.tasks.Task) -> c
-com.google.android.gms.tasks.zzm -> e.a.a.a.h.z:
+com.google.android.gms.tasks.zzm -> e.a.a.a.h.e0:
     com.google.android.gms.tasks.Task zza -> e
     com.google.android.gms.tasks.zzn zzb -> f
-com.google.android.gms.tasks.zzn -> e.a.a.a.h.a0:
+com.google.android.gms.tasks.zzn -> e.a.a.a.h.f0:
     java.util.concurrent.Executor zza -> a
     java.lang.Object zzb -> b
     com.google.android.gms.tasks.OnSuccessListener zzc -> c
     com.google.android.gms.tasks.OnSuccessListener zza(com.google.android.gms.tasks.zzn) -> a
     java.lang.Object zzb(com.google.android.gms.tasks.zzn) -> b
     void zzd(com.google.android.gms.tasks.Task) -> c
-com.google.android.gms.tasks.zzq -> e.a.a.a.h.b0:
+com.google.android.gms.tasks.zzq -> e.a.a.a.h.g0:
     void zzd(com.google.android.gms.tasks.Task) -> c
-com.google.android.gms.tasks.zzr -> e.a.a.a.h.c0:
+com.google.android.gms.tasks.zzr -> e.a.a.a.h.h0:
     java.util.Queue zzb -> b
     java.lang.Object zza -> a
     boolean zzc -> c
     void zza(com.google.android.gms.tasks.zzq) -> a
     void zzb(com.google.android.gms.tasks.Task) -> b
-com.google.android.gms.tasks.zzt -> e.a.a.a.h.d0:
-com.google.android.gms.tasks.zzu -> e.a.a.a.h.e0:
+com.google.android.gms.tasks.zzs -> e.a.a.a.h.i0:
+    com.google.android.gms.tasks.TaskCompletionSource zza -> a
+    void onCanceled() -> a
+com.google.android.gms.tasks.zzt -> e.a.a.a.h.j0:
+com.google.android.gms.tasks.zzu -> e.a.a.a.h.k0:
     android.os.Handler zza -> e
-com.google.android.gms.tasks.zzw -> e.a.a.a.h.f0:
+com.google.android.gms.tasks.zzw -> e.a.a.a.h.l0:
     java.lang.Exception zzf -> f
     com.google.android.gms.tasks.zzr zzb -> b
     java.lang.Object zze -> e
     java.lang.Object zza -> a
     boolean zzc -> c
     boolean zzd -> d
-    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> a
-    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> b
-    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> c
-    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> d
-    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> e
-    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> f
-    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> g
-    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> h
-    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> i
-    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> j
-    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> k
-    java.lang.Exception getException() -> l
-    java.lang.Object getResult() -> m
-    boolean isCanceled() -> n
-    boolean isComplete() -> o
-    boolean isSuccessful() -> p
-    void zza(java.lang.Exception) -> q
-    void zzb(java.lang.Object) -> r
-    boolean zzc() -> s
-    boolean zzd(java.lang.Exception) -> t
-    boolean zze(java.lang.Object) -> u
-    void zzf() -> v
-    void zzg() -> w
-    void zzh() -> x
-    void zzi() -> y
-com.google.android.gms.tasks.zzz -> e.a.a.a.h.g0:
+    com.google.android.gms.tasks.Task addOnCanceledListener(com.google.android.gms.tasks.OnCanceledListener) -> a
+    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> b
+    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> c
+    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> d
+    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> e
+    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> f
+    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> g
+    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> h
+    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> i
+    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> j
+    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> k
+    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> l
+    java.lang.Exception getException() -> m
+    java.lang.Object getResult() -> n
+    boolean isCanceled() -> o
+    boolean isComplete() -> p
+    boolean isSuccessful() -> q
+    void zza(java.lang.Exception) -> r
+    void zzb(java.lang.Object) -> s
+    boolean zzc() -> t
+    boolean zzd(java.lang.Exception) -> u
+    boolean zze(java.lang.Object) -> v
+    void zzf() -> w
+    void zzg() -> x
+    void zzh() -> y
+    void zzi() -> z
+com.google.android.gms.tasks.zzz -> e.a.a.a.h.m0:
     com.google.android.gms.tasks.zzw zza -> e
     java.util.concurrent.Callable zzb -> f
 com.google.cloud.datastore.core.number.NumberComparisonHelper -> e.a.b.a.a.a.a:
@@ -8654,7 +8693,8 @@ com.google.firebase.Timestamp$1 -> com.google.firebase.o$a:
     com.google.firebase.Timestamp createFromParcel(android.os.Parcel) -> a
     com.google.firebase.Timestamp[] newArray(int) -> b
 com.google.firebase.appcheck.AppCheckTokenResult -> com.google.firebase.p.a:
-    java.lang.String getToken() -> a
+    com.google.firebase.FirebaseException getError() -> a
+    java.lang.String getToken() -> b
 com.google.firebase.appcheck.interop.AppCheckTokenListener -> com.google.firebase.p.b.a:
 com.google.firebase.appcheck.interop.InternalAppCheckTokenProvider -> com.google.firebase.p.b.b:
     void addAppCheckTokenListener(com.google.firebase.appcheck.interop.AppCheckTokenListener) -> a
@@ -9088,19 +9128,19 @@ com.google.firebase.auth.UserProfileChangeRequest$Builder -> com.google.firebase
     com.google.firebase.auth.UserProfileChangeRequest$Builder setDisplayName(java.lang.String) -> b
     com.google.firebase.auth.UserProfileChangeRequest$Builder setPhotoUri(android.net.Uri) -> c
 com.google.firebase.auth.internal.GenericIdpActivity -> com.google.firebase.auth.internal.GenericIdpActivity:
-    com.google.firebase.auth.internal.zzbm zzc -> w
-    long zzb -> v
-    boolean zze -> u
-    java.util.concurrent.Executor zzd -> t
-    void zzi(com.google.android.gms.common.api.Status) -> A
+    com.google.firebase.auth.internal.zzbm zzc -> x
+    long zzb -> w
+    boolean zze -> v
+    java.util.concurrent.Executor zzd -> u
+    void zzh() -> A
+    void zzi(com.google.android.gms.common.api.Status) -> B
     android.content.Context zza() -> a
-    android.net.Uri$Builder zzb(android.content.Intent,java.lang.String,java.lang.String) -> c
-    java.lang.String zzc(java.lang.String) -> d
-    java.net.HttpURLConnection zzd(java.net.URL) -> f
-    void zze(java.lang.String,com.google.android.gms.common.api.Status) -> h
-    void zzf(android.net.Uri,java.lang.String) -> k
-    android.net.Uri$Builder zzg(android.net.Uri$Builder,android.content.Intent,java.lang.String,java.lang.String) -> y
-    void zzh() -> z
+    android.net.Uri$Builder zzb(android.content.Intent,java.lang.String,java.lang.String) -> d
+    java.lang.String zzc(java.lang.String) -> e
+    java.net.HttpURLConnection zzd(java.net.URL) -> g
+    void zze(java.lang.String,com.google.android.gms.common.api.Status) -> k
+    void zzf(android.net.Uri,java.lang.String) -> l
+    android.net.Uri$Builder zzg(android.net.Uri$Builder,android.content.Intent,java.lang.String,java.lang.String) -> z
 com.google.firebase.auth.internal.IdTokenListener -> com.google.firebase.auth.internal.a:
     void onIdTokenChanged(com.google.firebase.internal.InternalTokenResult) -> a
 com.google.firebase.auth.internal.InternalAuthProvider -> com.google.firebase.auth.internal.b:
@@ -9109,19 +9149,19 @@ com.google.firebase.auth.internal.InternalAuthProvider -> com.google.firebase.au
     java.lang.String getUid() -> c
     com.google.android.gms.tasks.Task getAccessToken(boolean) -> d
 com.google.firebase.auth.internal.RecaptchaActivity -> com.google.firebase.auth.internal.RecaptchaActivity:
-    java.util.concurrent.ExecutorService zzc -> v
-    com.google.firebase.auth.internal.zzbm zze -> x
-    long zzd -> w
-    java.lang.String zzb -> u
-    boolean zzf -> t
+    java.lang.String zzb -> v
+    java.util.concurrent.ExecutorService zzc -> w
+    com.google.firebase.auth.internal.zzbm zze -> y
+    long zzd -> x
+    boolean zzf -> u
+    void zzh(com.google.android.gms.common.api.Status) -> A
     android.content.Context zza() -> a
-    android.net.Uri$Builder zzb(android.content.Intent,java.lang.String,java.lang.String) -> c
-    java.lang.String zzc(java.lang.String) -> d
-    java.net.HttpURLConnection zzd(java.net.URL) -> f
-    void zze(java.lang.String,com.google.android.gms.common.api.Status) -> h
-    void zzf(android.net.Uri,java.lang.String) -> k
-    void zzg() -> y
-    void zzh(com.google.android.gms.common.api.Status) -> z
+    android.net.Uri$Builder zzb(android.content.Intent,java.lang.String,java.lang.String) -> d
+    java.lang.String zzc(java.lang.String) -> e
+    java.net.HttpURLConnection zzd(java.net.URL) -> g
+    void zze(java.lang.String,com.google.android.gms.common.api.Status) -> k
+    void zzf(android.net.Uri,java.lang.String) -> l
+    void zzg() -> z
 com.google.firebase.auth.internal.zza -> com.google.firebase.auth.internal.c:
     com.google.firebase.auth.internal.zzf zze -> e
     com.google.firebase.auth.FirebaseAuth zza -> a
@@ -9915,7 +9955,10 @@ com.google.firebase.database.collection.RBTreeSortedMap$Builder$BooleanChunk -> 
     int chunkSize -> b
 com.google.firebase.dynamicloading.ComponentLoader -> com.google.firebase.r.a:
 com.google.firebase.emulators.EmulatedServiceSettings -> com.google.firebase.s.a:
+    java.lang.String host -> a
+    int port -> b
     java.lang.String getHost() -> a
+    int getPort() -> b
 com.google.firebase.events.Event -> com.google.firebase.t.a:
     java.lang.Object payload -> b
     java.lang.Class type -> a
@@ -10244,27 +10287,28 @@ com.google.firebase.firestore.LoadBundleTask -> com.google.firebase.firestore.g0
     com.google.android.gms.tasks.Task delegate -> d
     java.lang.Object lock -> a
     com.google.android.gms.tasks.TaskCompletionSource completionSource -> c
-    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> a
-    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> b
-    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> c
-    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> d
-    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> e
-    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> f
-    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> g
-    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> h
-    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> i
-    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> j
-    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> k
-    java.lang.Exception getException() -> l
-    java.lang.Object getResult() -> m
-    boolean isCanceled() -> n
-    boolean isComplete() -> o
-    boolean isSuccessful() -> p
-    com.google.firebase.firestore.LoadBundleTask addOnProgressListener(com.google.firebase.firestore.OnProgressListener) -> q
-    com.google.firebase.firestore.LoadBundleTaskProgress getResult() -> r
-    void setException(java.lang.Exception) -> s
-    void setResult(com.google.firebase.firestore.LoadBundleTaskProgress) -> t
-    void updateProgress(com.google.firebase.firestore.LoadBundleTaskProgress) -> u
+    com.google.android.gms.tasks.Task addOnCanceledListener(com.google.android.gms.tasks.OnCanceledListener) -> a
+    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> b
+    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> c
+    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> d
+    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> e
+    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> f
+    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> g
+    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> h
+    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> i
+    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> j
+    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> k
+    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> l
+    java.lang.Exception getException() -> m
+    java.lang.Object getResult() -> n
+    boolean isCanceled() -> o
+    boolean isComplete() -> p
+    boolean isSuccessful() -> q
+    com.google.firebase.firestore.LoadBundleTask addOnProgressListener(com.google.firebase.firestore.OnProgressListener) -> r
+    com.google.firebase.firestore.LoadBundleTaskProgress getResult() -> s
+    void setException(java.lang.Exception) -> t
+    void setResult(com.google.firebase.firestore.LoadBundleTaskProgress) -> u
+    void updateProgress(com.google.firebase.firestore.LoadBundleTaskProgress) -> v
 com.google.firebase.firestore.LoadBundleTask$ManagedListener -> com.google.firebase.firestore.g0$a:
     com.google.firebase.firestore.OnProgressListener listener -> b
     java.util.concurrent.Executor executor -> a
@@ -14104,6 +14148,687 @@ com.google.firebase.platforminfo.UserAgentPublisher -> com.google.firebase.x.i:
     java.lang.String getUserAgent() -> a
 com.google.firebase.provider.FirebaseInitProvider -> com.google.firebase.provider.FirebaseInitProvider:
     void checkContentProviderAuthority(android.content.pm.ProviderInfo) -> a
+com.google.firebase.storage.-$$Lambda$0ZEndH1RQEKxIilqWbB8Nk19iDo -> com.google.firebase.storage.a:
+    com.google.android.gms.tasks.CancellationTokenSource f$0 -> a
+    void onCanceled() -> a
+com.google.firebase.storage.-$$Lambda$HI9VW-fkLzW-JEKLQBX3mZC5p1s -> com.google.firebase.storage.b:
+    com.google.firebase.storage.-$$Lambda$HI9VW-fkLzW-JEKLQBX3mZC5p1s INSTANCE -> a
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.-$$Lambda$JkyFbgEatWwF9u2RXdKZbbkQ0Jw -> com.google.firebase.storage.c:
+    com.google.android.gms.tasks.TaskCompletionSource f$0 -> a
+    void onSuccess(java.lang.Object) -> d
+com.google.firebase.storage.-$$Lambda$StorageRegistrar$RXqO-6s_labOc_n4XsQB2tjgy2U -> com.google.firebase.storage.d:
+    com.google.firebase.storage.-$$Lambda$StorageRegistrar$RXqO-6s_labOc_n4XsQB2tjgy2U INSTANCE -> a
+    java.lang.Object create(com.google.firebase.components.ComponentContainer) -> a
+com.google.firebase.storage.-$$Lambda$StorageTask$Jkv9xcVZaYz5UBCNvMSmJTHEG18 -> com.google.firebase.storage.e:
+    com.google.firebase.storage.StorageTask f$0 -> a
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.-$$Lambda$StorageTask$NSdjk49HEq4blyR-OF6mZEPTt_s -> com.google.firebase.storage.f:
+    com.google.firebase.storage.StorageTask f$0 -> a
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.-$$Lambda$StorageTask$kGBBr9mjcn2-DxduMaHtT-Bojro -> com.google.firebase.storage.g:
+    com.google.firebase.storage.StorageTask f$0 -> a
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.-$$Lambda$StorageTask$mk_kE2XoKM88mAmixvAkBmUTyro -> com.google.firebase.storage.h:
+    com.google.android.gms.tasks.Continuation f$1 -> b
+    com.google.firebase.storage.StorageTask f$0 -> a
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> c
+    void onComplete(com.google.android.gms.tasks.Task) -> a
+com.google.firebase.storage.-$$Lambda$StorageTask$q9YBoR_A8LB-JxTCx8JRQvabaZs -> com.google.firebase.storage.i:
+    com.google.firebase.storage.StorageTask f$0 -> e
+com.google.firebase.storage.-$$Lambda$StorageTask$uAL5ZNP1zCuP5yLsgZAe-801mpY -> com.google.firebase.storage.j:
+    com.google.android.gms.tasks.Continuation f$1 -> b
+    com.google.android.gms.tasks.CancellationTokenSource f$3 -> d
+    com.google.firebase.storage.StorageTask f$0 -> a
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> c
+    void onComplete(com.google.android.gms.tasks.Task) -> a
+com.google.firebase.storage.-$$Lambda$StorageTask$xlHsb5OfSRp-di5vg8sdDdXsCO4 -> com.google.firebase.storage.k:
+    com.google.firebase.storage.StorageTask f$0 -> a
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.-$$Lambda$TaskListenerImpl$9S735gSTLEjyjiLA9feZHcjz9nc -> com.google.firebase.storage.l:
+    com.google.firebase.storage.TaskListenerImpl f$0 -> e
+    java.lang.Object f$1 -> f
+com.google.firebase.storage.-$$Lambda$TaskListenerImpl$S8elBxPWPDCBbbHv0Z6yA1jvX68 -> com.google.firebase.storage.m:
+    com.google.firebase.storage.TaskListenerImpl f$0 -> e
+    com.google.firebase.storage.StorageTask$ProvideError f$2 -> g
+    java.lang.Object f$1 -> f
+com.google.firebase.storage.-$$Lambda$TaskListenerImpl$jo6z-BgrthwDXSAznMNohfdE2VU -> com.google.firebase.storage.n:
+    com.google.firebase.storage.TaskListenerImpl f$0 -> e
+    com.google.firebase.storage.StorageTask$ProvideError f$2 -> g
+    java.lang.Object f$1 -> f
+com.google.firebase.storage.-$$Lambda$XYrrQpsB_p_00PPOCyqc7ym51TA -> com.google.firebase.storage.o:
+    com.google.firebase.storage.-$$Lambda$XYrrQpsB_p_00PPOCyqc7ym51TA INSTANCE -> a
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.-$$Lambda$g715g6W7VdV2JIn7lpH1jtTC4D0 -> com.google.firebase.storage.p:
+    com.google.android.gms.tasks.TaskCompletionSource f$0 -> a
+    void onFailure(java.lang.Exception) -> b
+com.google.firebase.storage.CancelException -> com.google.firebase.storage.q:
+com.google.firebase.storage.CancellableTask -> com.google.firebase.storage.r:
+com.google.firebase.storage.ControllableTask -> com.google.firebase.storage.s:
+com.google.firebase.storage.DeleteStorageTask -> com.google.firebase.storage.t:
+    com.google.android.gms.tasks.TaskCompletionSource mPendingResult -> f
+    com.google.firebase.storage.internal.ExponentialBackoffSender mSender -> g
+    com.google.firebase.storage.StorageReference mStorageRef -> e
+com.google.firebase.storage.FileDownloadTask -> com.google.firebase.storage.u:
+    com.google.firebase.storage.StorageReference mStorageRef -> n
+    android.net.Uri mDestinationFile -> l
+    java.lang.String mETagVerification -> q
+    int mResultCode -> t
+    long mResumeOffset -> s
+    java.lang.Exception mException -> r
+    long mBytesDownloaded -> m
+    long mTotalBytes -> p
+    com.google.firebase.storage.internal.ExponentialBackoffSender mSender -> o
+    com.google.firebase.storage.StorageReference getStorage() -> M
+    void onCanceled() -> e0
+    void run() -> o0
+    void schedule() -> p0
+    com.google.firebase.storage.StorageTask$ProvideError snapStateImpl() -> r0
+    int fillBuffer(java.io.InputStream,byte[]) -> u0
+    long getTotalBytes() -> v0
+    boolean isValidHttpResponseCode(int) -> w0
+    boolean processResponse(com.google.firebase.storage.network.NetworkRequest) -> x0
+    com.google.firebase.storage.FileDownloadTask$TaskSnapshot snapStateImpl() -> y0
+com.google.firebase.storage.FileDownloadTask$TaskSnapshot -> com.google.firebase.storage.u$a:
+    long mBytesDownloaded -> c
+    com.google.firebase.storage.FileDownloadTask this$0 -> d
+    long getBytesTransferred() -> d
+    long getTotalByteCount() -> e
+com.google.firebase.storage.FirebaseStorage -> com.google.firebase.storage.v:
+    long sMaxDownloadRetry -> f
+    long sMaxUploadRetry -> e
+    com.google.firebase.inject.Provider mAppCheckProvider -> c
+    com.google.firebase.inject.Provider mAuthProvider -> b
+    long sMaxQueryRetry -> g
+    com.google.firebase.emulators.EmulatedServiceSettings emulatorSettings -> h
+    com.google.firebase.FirebaseApp mApp -> a
+    java.lang.String mBucketName -> d
+    com.google.firebase.FirebaseApp getApp() -> a
+    com.google.firebase.appcheck.interop.InternalAppCheckTokenProvider getAppCheckProvider() -> b
+    com.google.firebase.auth.internal.InternalAuthProvider getAuthProvider() -> c
+    java.lang.String getBucketName() -> d
+    com.google.firebase.emulators.EmulatedServiceSettings getEmulatorSettings() -> e
+    com.google.firebase.storage.FirebaseStorage getInstance(com.google.firebase.FirebaseApp) -> f
+    com.google.firebase.storage.FirebaseStorage getInstance(com.google.firebase.FirebaseApp,java.lang.String) -> g
+    com.google.firebase.storage.FirebaseStorage getInstanceImpl(com.google.firebase.FirebaseApp,android.net.Uri) -> h
+    long getMaxDownloadRetryTimeMillis() -> i
+    long getMaxOperationRetryTimeMillis() -> j
+    long getMaxUploadRetryTimeMillis() -> k
+    com.google.firebase.storage.StorageReference getReference() -> l
+    com.google.firebase.storage.StorageReference getReference(android.net.Uri) -> m
+    com.google.firebase.storage.StorageReference getReference(java.lang.String) -> n
+    void setMaxDownloadRetryTimeMillis(long) -> o
+    void setMaxOperationRetryTimeMillis(long) -> p
+    void setMaxUploadRetryTimeMillis(long) -> q
+    void useEmulator(java.lang.String,int) -> r
+com.google.firebase.storage.FirebaseStorage$1 -> com.google.firebase.storage.v$a:
+com.google.firebase.storage.FirebaseStorageComponent -> com.google.firebase.storage.w:
+    java.util.Map instances -> a
+    com.google.firebase.inject.Provider appCheckProvider -> d
+    com.google.firebase.inject.Provider authProvider -> c
+    com.google.firebase.FirebaseApp app -> b
+    com.google.firebase.storage.FirebaseStorage get(java.lang.String) -> a
+com.google.firebase.storage.GetDownloadUrlTask -> com.google.firebase.storage.x:
+    com.google.android.gms.tasks.TaskCompletionSource pendingResult -> f
+    com.google.firebase.storage.internal.ExponentialBackoffSender sender -> g
+    com.google.firebase.storage.StorageReference storageRef -> e
+    android.net.Uri extractDownloadUrl(org.json.JSONObject) -> a
+com.google.firebase.storage.GetMetadataTask -> com.google.firebase.storage.y:
+    com.google.android.gms.tasks.TaskCompletionSource mPendingResult -> f
+    com.google.firebase.storage.StorageMetadata mResultMetadata -> g
+    com.google.firebase.storage.internal.ExponentialBackoffSender mSender -> h
+    com.google.firebase.storage.StorageReference mStorageRef -> e
+com.google.firebase.storage.ListResult -> com.google.firebase.storage.z:
+    java.util.List items -> b
+    java.util.List prefixes -> a
+    java.lang.String pageToken -> c
+    com.google.firebase.storage.ListResult fromJSON(com.google.firebase.storage.FirebaseStorage,org.json.JSONObject) -> a
+    java.util.List getItems() -> b
+    java.lang.String getPageToken() -> c
+    java.util.List getPrefixes() -> d
+com.google.firebase.storage.ListTask -> com.google.firebase.storage.a0:
+    com.google.android.gms.tasks.TaskCompletionSource pendingResult -> f
+    java.lang.String pageToken -> h
+    java.lang.Integer maxResults -> i
+    com.google.firebase.storage.internal.ExponentialBackoffSender sender -> g
+    com.google.firebase.storage.StorageReference storageRef -> e
+com.google.firebase.storage.OnPausedListener -> com.google.firebase.storage.b0:
+    void onPaused(java.lang.Object) -> a
+com.google.firebase.storage.OnProgressListener -> com.google.firebase.storage.c0:
+    void onProgress(java.lang.Object) -> a
+com.google.firebase.storage.StorageException -> com.google.firebase.storage.d0:
+    int httpResultCode -> f
+    java.lang.Throwable cause -> g
+    int errorCode -> e
+    int calculateErrorCode(com.google.android.gms.common.api.Status) -> a
+    int calculateErrorCode(java.lang.Throwable,int) -> b
+    com.google.firebase.storage.StorageException fromErrorStatus(com.google.android.gms.common.api.Status) -> c
+    com.google.firebase.storage.StorageException fromException(java.lang.Throwable) -> d
+    com.google.firebase.storage.StorageException fromExceptionAndHttpCode(java.lang.Throwable,int) -> e
+    int getErrorCode() -> f
+    java.lang.String getErrorMessageForCode(int) -> g
+    boolean isResultSuccess(int) -> h
+com.google.firebase.storage.StorageMetadata -> com.google.firebase.storage.e0:
+    java.lang.String mMetadataGeneration -> g
+    long mSize -> j
+    java.lang.String mUpdatedTime -> i
+    java.lang.String mCreationTime -> h
+    com.google.firebase.storage.StorageMetadata$MetadataValue mContentType -> f
+    java.lang.String mMD5Hash -> k
+    com.google.firebase.storage.StorageReference mStorageRef -> c
+    com.google.firebase.storage.StorageMetadata$MetadataValue mCustomMetadata -> p
+    com.google.firebase.storage.StorageMetadata$MetadataValue mContentLanguage -> o
+    java.lang.String mPath -> a
+    com.google.firebase.storage.StorageMetadata$MetadataValue mContentEncoding -> n
+    com.google.firebase.storage.FirebaseStorage mStorage -> b
+    com.google.firebase.storage.StorageMetadata$MetadataValue mContentDisposition -> m
+    java.lang.String mGeneration -> e
+    com.google.firebase.storage.StorageMetadata$MetadataValue mCacheControl -> l
+    java.lang.String mBucket -> d
+    java.lang.String getGeneration() -> A
+    java.lang.String getMd5Hash() -> B
+    java.lang.String getMetadataGeneration() -> C
+    java.lang.String getName() -> D
+    java.lang.String getPath() -> E
+    long getSizeBytes() -> F
+    long getUpdatedTimeMillis() -> G
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1002(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageMetadata$MetadataValue) -> a
+    com.google.firebase.storage.StorageReference access$102(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageReference) -> b
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1102(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageMetadata$MetadataValue) -> c
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1202(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageMetadata$MetadataValue) -> d
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1302(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageMetadata$MetadataValue) -> e
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1400(com.google.firebase.storage.StorageMetadata) -> f
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1402(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageMetadata$MetadataValue) -> g
+    com.google.firebase.storage.StorageMetadata$MetadataValue access$1502(com.google.firebase.storage.StorageMetadata,com.google.firebase.storage.StorageMetadata$MetadataValue) -> h
+    java.lang.String access$202(com.google.firebase.storage.StorageMetadata,java.lang.String) -> i
+    java.lang.String access$302(com.google.firebase.storage.StorageMetadata,java.lang.String) -> j
+    java.lang.String access$402(com.google.firebase.storage.StorageMetadata,java.lang.String) -> k
+    java.lang.String access$502(com.google.firebase.storage.StorageMetadata,java.lang.String) -> l
+    java.lang.String access$602(com.google.firebase.storage.StorageMetadata,java.lang.String) -> m
+    java.lang.String access$702(com.google.firebase.storage.StorageMetadata,java.lang.String) -> n
+    long access$802(com.google.firebase.storage.StorageMetadata,long) -> o
+    java.lang.String access$902(com.google.firebase.storage.StorageMetadata,java.lang.String) -> p
+    org.json.JSONObject createJSONObject() -> q
+    java.lang.String getBucket() -> r
+    java.lang.String getCacheControl() -> s
+    java.lang.String getContentDisposition() -> t
+    java.lang.String getContentEncoding() -> u
+    java.lang.String getContentLanguage() -> v
+    java.lang.String getContentType() -> w
+    long getCreationTimeMillis() -> x
+    java.lang.String getCustomMetadata(java.lang.String) -> y
+    java.util.Set getCustomMetadataKeys() -> z
+com.google.firebase.storage.StorageMetadata$1 -> com.google.firebase.storage.e0$a:
+com.google.firebase.storage.StorageMetadata$Builder -> com.google.firebase.storage.e0$b:
+    com.google.firebase.storage.StorageMetadata mMetadata -> a
+    boolean mFromJSON -> b
+    com.google.firebase.storage.StorageMetadata build() -> a
+    java.lang.String extractString(org.json.JSONObject,java.lang.String) -> b
+    void parseJSON(org.json.JSONObject) -> c
+    com.google.firebase.storage.StorageMetadata$Builder setCacheControl(java.lang.String) -> d
+    com.google.firebase.storage.StorageMetadata$Builder setContentDisposition(java.lang.String) -> e
+    com.google.firebase.storage.StorageMetadata$Builder setContentEncoding(java.lang.String) -> f
+    com.google.firebase.storage.StorageMetadata$Builder setContentLanguage(java.lang.String) -> g
+    com.google.firebase.storage.StorageMetadata$Builder setContentType(java.lang.String) -> h
+    com.google.firebase.storage.StorageMetadata$Builder setCustomMetadata(java.lang.String,java.lang.String) -> i
+com.google.firebase.storage.StorageMetadata$MetadataValue -> com.google.firebase.storage.e0$c:
+    java.lang.Object value -> b
+    boolean userProvided -> a
+    java.lang.Object getValue() -> a
+    boolean isUserProvided() -> b
+    com.google.firebase.storage.StorageMetadata$MetadataValue withDefaultValue(java.lang.Object) -> c
+    com.google.firebase.storage.StorageMetadata$MetadataValue withUserValue(java.lang.Object) -> d
+com.google.firebase.storage.StorageReference -> com.google.firebase.storage.f0:
+    com.google.firebase.storage.FirebaseStorage mFirebaseStorage -> f
+    android.net.Uri mStorageUri -> e
+    com.google.android.gms.tasks.Task list(int,java.lang.String) -> A
+    com.google.android.gms.tasks.Task listAll() -> B
+    com.google.android.gms.tasks.Task listHelper(java.lang.Integer,java.lang.String) -> C
+    com.google.firebase.storage.UploadTask putBytes(byte[]) -> D
+    com.google.firebase.storage.UploadTask putBytes(byte[],com.google.firebase.storage.StorageMetadata) -> E
+    com.google.firebase.storage.UploadTask putFile(android.net.Uri) -> F
+    com.google.firebase.storage.UploadTask putFile(android.net.Uri,com.google.firebase.storage.StorageMetadata) -> G
+    com.google.android.gms.tasks.Task updateMetadata(com.google.firebase.storage.StorageMetadata) -> H
+    com.google.android.gms.tasks.Task access$000(com.google.firebase.storage.StorageReference,java.lang.Integer,java.lang.String) -> d
+    com.google.firebase.storage.StorageReference child(java.lang.String) -> g
+    int compareTo(com.google.firebase.storage.StorageReference) -> h
+    com.google.android.gms.tasks.Task delete() -> i
+    com.google.firebase.FirebaseApp getApp() -> k
+    java.lang.String getBucket() -> n
+    com.google.android.gms.tasks.Task getBytes(long) -> p
+    com.google.android.gms.tasks.Task getDownloadUrl() -> q
+    com.google.firebase.storage.FileDownloadTask getFile(android.net.Uri) -> r
+    com.google.android.gms.tasks.Task getMetadata() -> s
+    java.lang.String getName() -> t
+    com.google.firebase.storage.StorageReference getParent() -> u
+    java.lang.String getPath() -> v
+    com.google.firebase.storage.StorageReference getRoot() -> w
+    com.google.firebase.storage.FirebaseStorage getStorage() -> x
+    com.google.firebase.storage.internal.StorageReferenceUri getStorageReferenceUri() -> y
+    com.google.android.gms.tasks.Task list(int) -> z
+com.google.firebase.storage.StorageReference$1 -> com.google.firebase.storage.f0$a:
+    com.google.android.gms.tasks.TaskCompletionSource val$pendingResult -> a
+    void onFailure(java.lang.Exception) -> b
+com.google.firebase.storage.StorageReference$2 -> com.google.firebase.storage.f0$b:
+    com.google.android.gms.tasks.TaskCompletionSource val$pendingResult -> a
+    void onSuccess(com.google.firebase.storage.StreamDownloadTask$TaskSnapshot) -> a
+    void onSuccess(java.lang.Object) -> d
+com.google.firebase.storage.StorageReference$3 -> com.google.firebase.storage.f0$c:
+    long val$maxDownloadSizeBytes -> a
+    com.google.android.gms.tasks.TaskCompletionSource val$pendingResult -> b
+    void doInBackground(com.google.firebase.storage.StreamDownloadTask$TaskSnapshot,java.io.InputStream) -> a
+com.google.firebase.storage.StorageReference$4 -> com.google.firebase.storage.f0$d:
+    java.util.List val$items -> b
+    java.util.List val$prefixes -> a
+    java.util.concurrent.Executor val$executor -> c
+    com.google.firebase.storage.StorageReference this$0 -> e
+    com.google.android.gms.tasks.TaskCompletionSource val$pendingResult -> d
+    java.lang.Object then(com.google.android.gms.tasks.Task) -> a
+    com.google.android.gms.tasks.Task then(com.google.android.gms.tasks.Task) -> b
+com.google.firebase.storage.StorageRegistrar -> com.google.firebase.storage.StorageRegistrar:
+    com.google.firebase.storage.FirebaseStorageComponent lambda$getComponents$0(com.google.firebase.components.ComponentContainer) -> a
+com.google.firebase.storage.StorageTask -> com.google.firebase.storage.g0:
+    java.util.HashMap ValidUserInitiatedStateChanges -> j
+    com.google.firebase.storage.TaskListenerImpl cancelManager -> e
+    com.google.firebase.storage.TaskListenerImpl completeListener -> d
+    com.google.firebase.storage.TaskListenerImpl pausedManager -> g
+    com.google.firebase.storage.StorageTask$ProvideError finalResult -> i
+    com.google.firebase.storage.TaskListenerImpl progressManager -> f
+    int currentState -> h
+    java.util.HashMap ValidTaskInitiatedStateChanges -> k
+    java.lang.Object syncObject -> a
+    com.google.firebase.storage.TaskListenerImpl failureManager -> c
+    com.google.firebase.storage.TaskListenerImpl successManager -> b
+    com.google.firebase.storage.StorageTask addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> A
+    boolean cancel() -> B
+    com.google.android.gms.tasks.Task continueWithImpl(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> C
+    com.google.android.gms.tasks.Task continueWithTaskImpl(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> D
+    void ensureFinalState() -> E
+    com.google.firebase.storage.StorageTask$ProvideError getFinalResult() -> F
+    int getInternalState() -> G
+    com.google.firebase.storage.StorageTask$ProvideError getResult() -> H
+    java.lang.Runnable getRunnable() -> I
+    com.google.firebase.storage.StorageTask$ProvideError getSnapshot() -> J
+    java.lang.String getStateString(int) -> K
+    java.lang.String getStateString(int[]) -> L
+    com.google.firebase.storage.StorageReference getStorage() -> M
+    java.lang.Object getSyncObject() -> N
+    boolean isInProgress() -> O
+    boolean isPaused() -> P
+    void lambda$continueWithImpl$4(com.google.android.gms.tasks.Continuation,com.google.android.gms.tasks.TaskCompletionSource,com.google.android.gms.tasks.Task) -> Q
+    void lambda$continueWithImpl$4$StorageTask(com.google.android.gms.tasks.Continuation,com.google.android.gms.tasks.TaskCompletionSource,com.google.android.gms.tasks.Task) -> R
+    void lambda$continueWithTaskImpl$5(com.google.android.gms.tasks.Continuation,com.google.android.gms.tasks.TaskCompletionSource,com.google.android.gms.tasks.CancellationTokenSource,com.google.android.gms.tasks.Task) -> S
+    void lambda$continueWithTaskImpl$5$StorageTask(com.google.android.gms.tasks.Continuation,com.google.android.gms.tasks.TaskCompletionSource,com.google.android.gms.tasks.CancellationTokenSource,com.google.android.gms.tasks.Task) -> T
+    void lambda$getRunnable$7() -> U
+    void lambda$getRunnable$7$StorageTask() -> V
+    void lambda$new$0(com.google.android.gms.tasks.OnSuccessListener,com.google.firebase.storage.StorageTask$ProvideError) -> W
+    void lambda$new$0$StorageTask(com.google.android.gms.tasks.OnSuccessListener,com.google.firebase.storage.StorageTask$ProvideError) -> X
+    void lambda$new$1(com.google.android.gms.tasks.OnFailureListener,com.google.firebase.storage.StorageTask$ProvideError) -> Y
+    void lambda$new$1$StorageTask(com.google.android.gms.tasks.OnFailureListener,com.google.firebase.storage.StorageTask$ProvideError) -> Z
+    com.google.android.gms.tasks.Task addOnCanceledListener(com.google.android.gms.tasks.OnCanceledListener) -> a
+    void lambda$new$2(com.google.android.gms.tasks.OnCompleteListener,com.google.firebase.storage.StorageTask$ProvideError) -> a0
+    com.google.android.gms.tasks.Task addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> b
+    void lambda$new$2$StorageTask(com.google.android.gms.tasks.OnCompleteListener,com.google.firebase.storage.StorageTask$ProvideError) -> b0
+    com.google.android.gms.tasks.Task addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> c
+    void lambda$new$3(com.google.android.gms.tasks.OnCanceledListener,com.google.firebase.storage.StorageTask$ProvideError) -> c0
+    com.google.android.gms.tasks.Task addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> d
+    void lambda$new$3$StorageTask(com.google.android.gms.tasks.OnCanceledListener,com.google.firebase.storage.StorageTask$ProvideError) -> d0
+    com.google.android.gms.tasks.Task addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> e
+    void onCanceled() -> e0
+    com.google.android.gms.tasks.Task addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> f
+    void onFailure() -> f0
+    com.google.android.gms.tasks.Task addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> g
+    void onPaused() -> g0
+    com.google.android.gms.tasks.Task addOnSuccessListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnSuccessListener) -> h
+    void onProgress() -> h0
+    com.google.android.gms.tasks.Task continueWith(com.google.android.gms.tasks.Continuation) -> i
+    void onQueued() -> i0
+    com.google.android.gms.tasks.Task continueWith(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> j
+    void onSuccess() -> j0
+    com.google.android.gms.tasks.Task continueWithTask(com.google.android.gms.tasks.Continuation) -> k
+    boolean pause() -> k0
+    com.google.android.gms.tasks.Task continueWithTask(java.util.concurrent.Executor,com.google.android.gms.tasks.Continuation) -> l
+    boolean queue() -> l0
+    java.lang.Exception getException() -> m
+    void resetState() -> m0
+    java.lang.Object getResult() -> n
+    boolean resume() -> n0
+    boolean isCanceled() -> o
+    void run() -> o0
+    boolean isComplete() -> p
+    void schedule() -> p0
+    boolean isSuccessful() -> q
+    com.google.firebase.storage.StorageTask$ProvideError snapState() -> q0
+    com.google.firebase.storage.StorageTask addOnCanceledListener(com.google.android.gms.tasks.OnCanceledListener) -> r
+    com.google.firebase.storage.StorageTask$ProvideError snapStateImpl() -> r0
+    com.google.firebase.storage.StorageTask addOnCanceledListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCanceledListener) -> s
+    boolean tryChangeState(int,boolean) -> s0
+    com.google.firebase.storage.StorageTask addOnCompleteListener(com.google.android.gms.tasks.OnCompleteListener) -> t
+    boolean tryChangeState(int[],boolean) -> t0
+    com.google.firebase.storage.StorageTask addOnCompleteListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnCompleteListener) -> u
+    com.google.firebase.storage.StorageTask addOnFailureListener(com.google.android.gms.tasks.OnFailureListener) -> v
+    com.google.firebase.storage.StorageTask addOnFailureListener(java.util.concurrent.Executor,com.google.android.gms.tasks.OnFailureListener) -> w
+    com.google.firebase.storage.StorageTask addOnPausedListener(java.util.concurrent.Executor,com.google.firebase.storage.OnPausedListener) -> x
+    com.google.firebase.storage.StorageTask addOnProgressListener(java.util.concurrent.Executor,com.google.firebase.storage.OnProgressListener) -> y
+    com.google.firebase.storage.StorageTask addOnSuccessListener(com.google.android.gms.tasks.OnSuccessListener) -> z
+com.google.firebase.storage.StorageTask$ProvideError -> com.google.firebase.storage.g0$a:
+    java.lang.Exception getError() -> a
+com.google.firebase.storage.StorageTask$SnapshotBase -> com.google.firebase.storage.g0$b:
+    com.google.firebase.storage.StorageTask this$0 -> b
+    java.lang.Exception error -> a
+    java.lang.Exception getError() -> a
+    com.google.firebase.storage.StorageReference getStorage() -> b
+    com.google.firebase.storage.StorageTask getTask() -> c
+com.google.firebase.storage.StorageTaskManager -> com.google.firebase.storage.h0:
+    java.util.Map inProgressTasks -> a
+    java.lang.Object syncObject -> b
+    com.google.firebase.storage.StorageTaskManager _instance -> c
+    void ensureRegistered(com.google.firebase.storage.StorageTask) -> a
+    com.google.firebase.storage.StorageTaskManager getInstance() -> b
+    void unRegister(com.google.firebase.storage.StorageTask) -> c
+com.google.firebase.storage.StorageTaskScheduler -> com.google.firebase.storage.i0:
+    java.util.concurrent.BlockingQueue mDownloadQueue -> f
+    java.util.concurrent.BlockingQueue mCallbackQueue -> h
+    java.util.concurrent.ThreadPoolExecutor CALLBACK_QUEUE_EXECUTOR -> i
+    java.util.concurrent.ThreadPoolExecutor COMMAND_POOL_EXECUTOR -> c
+    java.util.concurrent.BlockingQueue mCommandQueue -> b
+    java.util.concurrent.ThreadPoolExecutor DOWNLOAD_QUEUE_EXECUTOR -> g
+    com.google.firebase.storage.StorageTaskScheduler sInstance -> a
+    java.util.concurrent.BlockingQueue mUploadQueue -> d
+    java.util.concurrent.ThreadPoolExecutor UPLOAD_QUEUE_EXECUTOR -> e
+    java.util.concurrent.Executor getCommandPoolExecutor() -> a
+    com.google.firebase.storage.StorageTaskScheduler getInstance() -> b
+    void scheduleCallback(java.lang.Runnable) -> c
+    void scheduleCommand(java.lang.Runnable) -> d
+    void scheduleDownload(java.lang.Runnable) -> e
+    void scheduleUpload(java.lang.Runnable) -> f
+com.google.firebase.storage.StorageTaskScheduler$StorageThreadFactory -> com.google.firebase.storage.i0$a:
+    java.util.concurrent.atomic.AtomicInteger threadNumber -> e
+    java.lang.String mNameSuffix -> f
+com.google.firebase.storage.StreamDownloadTask -> com.google.firebase.storage.j0:
+    int resultCode -> o
+    com.google.firebase.storage.StorageReference storageRef -> l
+    com.google.firebase.storage.network.NetworkRequest request -> t
+    java.lang.Exception exception -> n
+    long bytesDownloadedSnapped -> r
+    long bytesDownloaded -> q
+    java.io.InputStream inputStream -> s
+    com.google.firebase.storage.internal.ExponentialBackoffSender sender -> m
+    com.google.firebase.storage.StreamDownloadTask$StreamProcessor processor -> p
+    java.lang.String eTagVerification -> u
+    com.google.firebase.storage.StreamDownloadTask setStreamProcessor(com.google.firebase.storage.StreamDownloadTask$StreamProcessor) -> A0
+    com.google.firebase.storage.StreamDownloadTask$TaskSnapshot snapStateImpl() -> B0
+    com.google.firebase.storage.StorageReference getStorage() -> M
+    void onCanceled() -> e0
+    void onProgress() -> h0
+    boolean pause() -> k0
+    boolean resume() -> n0
+    void run() -> o0
+    void schedule() -> p0
+    com.google.firebase.storage.StorageTask$ProvideError snapStateImpl() -> r0
+    java.io.InputStream access$000(com.google.firebase.storage.StreamDownloadTask) -> u0
+    com.google.firebase.storage.network.NetworkRequest access$200(com.google.firebase.storage.StreamDownloadTask) -> v0
+    com.google.firebase.storage.network.NetworkRequest access$202(com.google.firebase.storage.StreamDownloadTask,com.google.firebase.storage.network.NetworkRequest) -> w0
+    java.io.InputStream createDownloadStream() -> x0
+    boolean isValidHttpResponseCode(int) -> y0
+    void recordDownloadedBytes(long) -> z0
+com.google.firebase.storage.StreamDownloadTask$1 -> com.google.firebase.storage.j0$a:
+    com.google.firebase.storage.StreamDownloadTask this$0 -> a
+    java.io.InputStream call() -> a
+com.google.firebase.storage.StreamDownloadTask$StreamProcessor -> com.google.firebase.storage.j0$b:
+    void doInBackground(com.google.firebase.storage.StreamDownloadTask$TaskSnapshot,java.io.InputStream) -> a
+com.google.firebase.storage.StreamDownloadTask$StreamProgressWrapper -> com.google.firebase.storage.j0$c:
+    long mLastExceptionPosition -> j
+    long mDownloadedBytes -> i
+    java.io.IOException mTemporaryException -> h
+    com.google.firebase.storage.StreamDownloadTask mParentTask -> e
+    boolean mStreamClosed -> k
+    java.io.InputStream mWrappedStream -> f
+    java.util.concurrent.Callable mInputStreamCallable -> g
+    boolean access$100(com.google.firebase.storage.StreamDownloadTask$StreamProgressWrapper) -> a
+    void checkCancel() -> c
+    boolean ensureStream() -> d
+    void recordDownloadedBytes(long) -> g
+com.google.firebase.storage.StreamDownloadTask$TaskSnapshot -> com.google.firebase.storage.j0$d:
+com.google.firebase.storage.TaskListenerImpl -> com.google.firebase.storage.k0:
+    com.google.firebase.storage.TaskListenerImpl$OnRaise onRaise -> e
+    java.util.HashMap handlerMap -> b
+    java.util.Queue listenerQueue -> a
+    int targetStates -> d
+    com.google.firebase.storage.StorageTask task -> c
+    void addListener(android.app.Activity,java.util.concurrent.Executor,java.lang.Object) -> a
+    void lambda$addListener$0(java.lang.Object) -> b
+    void lambda$addListener$0$TaskListenerImpl(java.lang.Object) -> c
+    void lambda$addListener$1(java.lang.Object,com.google.firebase.storage.StorageTask$ProvideError) -> d
+    void lambda$addListener$1$TaskListenerImpl(java.lang.Object,com.google.firebase.storage.StorageTask$ProvideError) -> e
+    void lambda$onInternalStateChanged$2(java.lang.Object,com.google.firebase.storage.StorageTask$ProvideError) -> f
+    void lambda$onInternalStateChanged$2$TaskListenerImpl(java.lang.Object,com.google.firebase.storage.StorageTask$ProvideError) -> g
+    void onInternalStateChanged() -> h
+    void removeListener(java.lang.Object) -> i
+com.google.firebase.storage.TaskListenerImpl$OnRaise -> com.google.firebase.storage.k0$a:
+    void raise(java.lang.Object,java.lang.Object) -> a
+com.google.firebase.storage.UpdateMetadataTask -> com.google.firebase.storage.l0:
+    com.google.android.gms.tasks.TaskCompletionSource mPendingResult -> f
+    com.google.firebase.storage.StorageMetadata mResultMetadata -> h
+    com.google.firebase.storage.StorageMetadata mNewMetadata -> g
+    com.google.firebase.storage.StorageReference mStorageRef -> e
+    com.google.firebase.storage.internal.ExponentialBackoffSender mSender -> i
+com.google.firebase.storage.UploadTask -> com.google.firebase.storage.m0:
+    java.util.concurrent.atomic.AtomicLong mBytesUploaded -> p
+    com.google.firebase.storage.StorageReference mStorageRef -> l
+    com.google.firebase.storage.internal.ExponentialBackoffSender mSender -> t
+    com.google.firebase.storage.internal.AdaptiveStreamBuffer mStreamBuffer -> o
+    com.google.firebase.storage.StorageMetadata mMetadata -> v
+    boolean mIsStreamOwned -> u
+    com.google.firebase.appcheck.interop.InternalAppCheckTokenProvider mAppCheckProvider -> r
+    com.google.firebase.auth.internal.InternalAuthProvider mAuthProvider -> q
+    android.net.Uri mUploadUri -> w
+    int mResultCode -> z
+    java.lang.Exception mException -> x
+    java.lang.Exception mServerException -> y
+    java.lang.String mServerStatus -> A
+    android.net.Uri mUri -> m
+    long mTotalByteCount -> n
+    int mCurrentChunkSize -> s
+    boolean processResultValid(com.google.firebase.storage.network.NetworkRequest) -> A0
+    boolean recoverStatus(boolean) -> B0
+    boolean send(com.google.firebase.storage.network.NetworkRequest) -> C0
+    boolean sendWithRetry(com.google.firebase.storage.network.NetworkRequest) -> D0
+    boolean serverStateValid() -> E0
+    boolean shouldContinue() -> F0
+    com.google.firebase.storage.UploadTask$TaskSnapshot snapStateImpl() -> G0
+    void uploadChunk() -> H0
+    com.google.firebase.storage.StorageReference getStorage() -> M
+    void onCanceled() -> e0
+    void resetState() -> m0
+    void run() -> o0
+    void schedule() -> p0
+    com.google.firebase.storage.StorageTask$ProvideError snapStateImpl() -> r0
+    com.google.firebase.auth.internal.InternalAuthProvider access$000(com.google.firebase.storage.UploadTask) -> u0
+    com.google.firebase.appcheck.interop.InternalAppCheckTokenProvider access$100(com.google.firebase.storage.UploadTask) -> v0
+    com.google.firebase.storage.StorageReference access$200(com.google.firebase.storage.UploadTask) -> w0
+    void beginResumableUpload() -> x0
+    long getTotalByteCount() -> y0
+    boolean isValidHttpResponseCode(int) -> z0
+com.google.firebase.storage.UploadTask$1 -> com.google.firebase.storage.m0$a:
+    com.google.firebase.storage.network.NetworkRequest val$finalCancelRequest -> e
+    com.google.firebase.storage.UploadTask this$0 -> f
+com.google.firebase.storage.UploadTask$TaskSnapshot -> com.google.firebase.storage.m0$b:
+    com.google.firebase.storage.StorageMetadata mMetadata -> d
+    com.google.firebase.storage.UploadTask this$0 -> e
+    long mBytesUploaded -> c
+    long getBytesTransferred() -> d
+    com.google.firebase.storage.StorageMetadata getMetadata() -> e
+    long getTotalByteCount() -> f
+com.google.firebase.storage.internal.ActivityLifecycleListener -> com.google.firebase.storage.n0.a:
+    java.util.Map cookieMap -> a
+    com.google.firebase.storage.internal.ActivityLifecycleListener instance -> c
+    java.lang.Object sync -> b
+    com.google.firebase.storage.internal.ActivityLifecycleListener getInstance() -> a
+    void removeCookie(java.lang.Object) -> b
+    void runOnActivityStopped(android.app.Activity,java.lang.Object,java.lang.Runnable) -> c
+com.google.firebase.storage.internal.ActivityLifecycleListener$LifecycleEntry -> com.google.firebase.storage.n0.a$a:
+    java.lang.Runnable runnable -> b
+    java.lang.Object cookie -> c
+    android.app.Activity activity -> a
+    android.app.Activity getActivity() -> a
+    java.lang.Object getCookie() -> b
+    java.lang.Runnable getRunnable() -> c
+com.google.firebase.storage.internal.ActivityLifecycleListener$OnStopCallback -> com.google.firebase.storage.n0.a$b:
+    java.util.List listeners -> f
+    void onStop() -> k
+    void addEntry(com.google.firebase.storage.internal.ActivityLifecycleListener$LifecycleEntry) -> l
+    com.google.firebase.storage.internal.ActivityLifecycleListener$OnStopCallback getInstance(android.app.Activity) -> m
+    void removeEntry(com.google.firebase.storage.internal.ActivityLifecycleListener$LifecycleEntry) -> n
+com.google.firebase.storage.internal.AdaptiveStreamBuffer -> com.google.firebase.storage.n0.b:
+    byte[] buffer -> b
+    boolean adaptiveMode -> e
+    java.io.InputStream source -> a
+    java.lang.Runtime runtime -> f
+    int availableBytes -> c
+    boolean reachedEnd -> d
+    int advance(int) -> a
+    int available() -> b
+    void close() -> c
+    int fill(int) -> d
+    byte[] get() -> e
+    boolean isFinished() -> f
+    int resize(int) -> g
+com.google.firebase.storage.internal.ExponentialBackoffSender -> com.google.firebase.storage.n0.c:
+    android.content.Context context -> a
+    com.google.firebase.auth.internal.InternalAuthProvider authProvider -> b
+    java.util.Random random -> f
+    boolean canceled -> e
+    com.google.android.gms.common.util.Clock clock -> h
+    long retryTime -> d
+    com.google.firebase.storage.internal.Sleeper sleeper -> g
+    com.google.firebase.appcheck.interop.InternalAppCheckTokenProvider appCheckProvider -> c
+    void cancel() -> a
+    boolean isRetryableError(int) -> b
+    void reset() -> c
+    void sendWithExponentialBackoff(com.google.firebase.storage.network.NetworkRequest) -> d
+    void sendWithExponentialBackoff(com.google.firebase.storage.network.NetworkRequest,boolean) -> e
+com.google.firebase.storage.internal.Slashes -> com.google.firebase.storage.n0.d:
+    java.lang.String normalizeSlashes(java.lang.String) -> a
+    java.lang.String preserveSlashEncode(java.lang.String) -> b
+    java.lang.String slashize(java.lang.String) -> c
+com.google.firebase.storage.internal.Sleeper -> com.google.firebase.storage.n0.e:
+    void sleep(int) -> a
+com.google.firebase.storage.internal.SleeperImpl -> com.google.firebase.storage.n0.f:
+    void sleep(int) -> a
+com.google.firebase.storage.internal.SmartHandler -> com.google.firebase.storage.n0.g:
+    android.os.Handler handler -> a
+    java.util.concurrent.Executor executor -> b
+    boolean testMode -> c
+    void callBack(java.lang.Runnable) -> a
+com.google.firebase.storage.internal.StorageReferenceUri -> com.google.firebase.storage.n0.h:
+    android.net.Uri gsUri -> c
+    android.net.Uri httpUri -> b
+    android.net.Uri httpBaseUri -> a
+    android.net.Uri getGsUri() -> a
+    android.net.Uri getHttpBaseUri() -> b
+    android.net.Uri getHttpUri() -> c
+com.google.firebase.storage.internal.Util -> com.google.firebase.storage.n0.i:
+    boolean equals(java.lang.Object,java.lang.Object) -> a
+    java.lang.String getCurrentAppCheckToken(com.google.firebase.appcheck.interop.InternalAppCheckTokenProvider) -> b
+    java.lang.String getCurrentAuthToken(com.google.firebase.auth.internal.InternalAuthProvider) -> c
+    android.net.Uri normalize(com.google.firebase.FirebaseApp,java.lang.String) -> d
+    long parseDateTime(java.lang.String) -> e
+com.google.firebase.storage.network.DeleteNetworkRequest -> com.google.firebase.storage.o0.a:
+    java.lang.String getAction() -> e
+com.google.firebase.storage.network.GetMetadataNetworkRequest -> com.google.firebase.storage.o0.b:
+    java.lang.String getAction() -> e
+com.google.firebase.storage.network.GetNetworkRequest -> com.google.firebase.storage.o0.c:
+    java.lang.String getAction() -> e
+    java.util.Map getQueryParameters() -> m
+com.google.firebase.storage.network.ListNetworkRequest -> com.google.firebase.storage.o0.d:
+    java.lang.String nextPageToken -> o
+    java.lang.Integer maxPageSize -> n
+    java.lang.String getAction() -> e
+    java.util.Map getQueryParameters() -> m
+    android.net.Uri getURL() -> v
+com.google.firebase.storage.network.NetworkRequest -> com.google.firebase.storage.o0.e:
+    java.lang.String rawStringResponse -> f
+    android.content.Context context -> c
+    android.net.Uri PROD_BASE_URL -> k
+    java.lang.String gmsCoreVersion -> m
+    int resultingContentLength -> g
+    int resultCode -> e
+    java.lang.Exception mException -> a
+    java.util.Map resultHeaders -> d
+    com.google.firebase.storage.internal.StorageReferenceUri storageReferenceUri -> b
+    com.google.firebase.storage.network.connection.HttpURLConnectionFactory connectionFactory -> l
+    java.io.InputStream resultInputStream -> h
+    java.net.HttpURLConnection connection -> i
+    java.util.Map requestHeaders -> j
+    void parseSuccessulResponse(java.io.InputStream) -> A
+    void performRequest(java.lang.String,java.lang.String) -> B
+    void performRequest(java.lang.String,java.lang.String,android.content.Context) -> C
+    void performRequestEnd() -> D
+    void performRequestStart(java.lang.String,java.lang.String) -> E
+    void processResponseStream() -> F
+    void reset() -> G
+    void setCustomHeader(java.lang.String,java.lang.String) -> H
+    void completeTask(com.google.android.gms.tasks.TaskCompletionSource,java.lang.Object) -> a
+    void constructMessage(java.net.HttpURLConnection,java.lang.String,java.lang.String) -> b
+    java.net.HttpURLConnection createConnection() -> c
+    boolean ensureNetworkAvailable(android.content.Context) -> d
+    java.lang.String getAction() -> e
+    java.lang.Exception getException() -> f
+    java.lang.String getGmsCoreVersion(android.content.Context) -> g
+    org.json.JSONObject getOutputJSON() -> h
+    byte[] getOutputRaw() -> i
+    int getOutputRawSize() -> j
+    java.lang.String getPathWithoutBucket() -> k
+    java.lang.String getPathWithoutBucket(android.net.Uri) -> l
+    java.util.Map getQueryParameters() -> m
+    java.lang.String getRawResult() -> n
+    org.json.JSONObject getResultBody() -> o
+    int getResultCode() -> p
+    java.util.Map getResultHeadersImpl() -> q
+    java.lang.String getResultString(java.lang.String) -> r
+    int getResultingContentLength() -> s
+    com.google.firebase.storage.internal.StorageReferenceUri getStorageReferenceUri() -> t
+    java.io.InputStream getStream() -> u
+    android.net.Uri getURL() -> v
+    boolean isResultSuccess() -> w
+    void parseErrorResponse(java.io.InputStream) -> x
+    void parseResponse(java.io.InputStream) -> y
+    void parseResponse(java.net.HttpURLConnection) -> z
+com.google.firebase.storage.network.ResumableNetworkRequest -> com.google.firebase.storage.o0.f:
+com.google.firebase.storage.network.ResumableUploadByteRequest -> com.google.firebase.storage.o0.g:
+    byte[] chunk -> o
+    android.net.Uri uploadURL -> n
+    boolean isFinal -> q
+    int bytesToWrite -> r
+    long offset -> p
+    java.lang.String getAction() -> e
+    byte[] getOutputRaw() -> i
+    int getOutputRawSize() -> j
+    android.net.Uri getURL() -> v
+com.google.firebase.storage.network.ResumableUploadCancelRequest -> com.google.firebase.storage.o0.h:
+    android.net.Uri uploadURL -> n
+    java.lang.String getAction() -> e
+    android.net.Uri getURL() -> v
+com.google.firebase.storage.network.ResumableUploadQueryRequest -> com.google.firebase.storage.o0.i:
+    android.net.Uri uploadURL -> n
+    java.lang.String getAction() -> e
+    android.net.Uri getURL() -> v
+com.google.firebase.storage.network.ResumableUploadStartRequest -> com.google.firebase.storage.o0.j:
+    org.json.JSONObject metadata -> n
+    java.lang.String contentType -> o
+    java.lang.String getAction() -> e
+    org.json.JSONObject getOutputJSON() -> h
+    java.util.Map getQueryParameters() -> m
+    android.net.Uri getURL() -> v
+com.google.firebase.storage.network.UpdateMetadataNetworkRequest -> com.google.firebase.storage.o0.k:
+    org.json.JSONObject metadata -> n
+    java.lang.String getAction() -> e
+    org.json.JSONObject getOutputJSON() -> h
+com.google.firebase.storage.network.connection.HttpURLConnectionFactory -> com.google.firebase.storage.o0.l.a:
+    java.net.HttpURLConnection createInstance(java.net.URL) -> a
+com.google.firebase.storage.network.connection.HttpURLConnectionFactoryImpl -> com.google.firebase.storage.o0.l.b:
+    java.net.HttpURLConnection createInstance(java.net.URL) -> a
 com.google.firestore.admin.v1.Index -> e.a.d.a.a.a:
     com.google.firestore.admin.v1.Index access$1200() -> T
     java.util.List getFieldsList() -> U
@@ -17269,6 +17994,128 @@ com.google.type.LatLng$1 -> e.a.h.a$a:
 com.google.type.LatLng$Builder -> e.a.h.a$b:
     com.google.type.LatLng$Builder setLatitude(double) -> B
     com.google.type.LatLng$Builder setLongitude(double) -> C
+com.mr.flutter.plugin.filepicker.FileInfo -> com.mr.flutter.plugin.filepicker.a:
+    java.lang.String path -> a
+    long size -> d
+    java.lang.String name -> b
+    android.net.Uri uri -> c
+    byte[] bytes -> e
+    java.util.HashMap toMap() -> a
+com.mr.flutter.plugin.filepicker.FileInfo$Builder -> com.mr.flutter.plugin.filepicker.a$a:
+    java.lang.String path -> a
+    long size -> d
+    java.lang.String name -> b
+    android.net.Uri uri -> c
+    byte[] bytes -> e
+    com.mr.flutter.plugin.filepicker.FileInfo build() -> a
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withData(byte[]) -> b
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withName(java.lang.String) -> c
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withPath(java.lang.String) -> d
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withSize(long) -> e
+    com.mr.flutter.plugin.filepicker.FileInfo$Builder withUri(android.net.Uri) -> f
+com.mr.flutter.plugin.filepicker.FilePickerDelegate -> com.mr.flutter.plugin.filepicker.b:
+    java.lang.String type -> f
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate$PermissionManager permissionManager -> b
+    int REQUEST_CODE -> i
+    boolean loadDataToMemory -> e
+    java.lang.String[] allowedExtensions -> g
+    io.flutter.plugin.common.EventChannel$EventSink eventSink -> h
+    android.app.Activity activity -> a
+    io.flutter.plugin.common.MethodChannel$Result pendingResult -> c
+    boolean isMultipleSelection -> d
+    boolean onActivityResult(int,int,android.content.Intent) -> a
+    android.app.Activity access$000(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> b
+    boolean access$100(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> c
+    void access$200(com.mr.flutter.plugin.filepicker.FilePickerDelegate,java.lang.Object) -> d
+    java.lang.String access$300(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> e
+    void access$400(com.mr.flutter.plugin.filepicker.FilePickerDelegate,java.lang.String,java.lang.String) -> f
+    io.flutter.plugin.common.EventChannel$EventSink access$500(com.mr.flutter.plugin.filepicker.FilePickerDelegate) -> g
+    void clearPendingResult() -> h
+    void dispatchEventStatus(boolean) -> i
+    void finishWithAlreadyActiveError(io.flutter.plugin.common.MethodChannel$Result) -> j
+    void finishWithError(java.lang.String,java.lang.String) -> k
+    void finishWithSuccess(java.lang.Object) -> l
+    void setEventHandler(io.flutter.plugin.common.EventChannel$EventSink) -> m
+    boolean setPendingMethodCallAndResult(io.flutter.plugin.common.MethodChannel$Result) -> n
+    void startFileExplorer() -> o
+    void startFileExplorer(java.lang.String,boolean,boolean,java.lang.String[],io.flutter.plugin.common.MethodChannel$Result) -> p
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$1 -> com.mr.flutter.plugin.filepicker.b$a:
+    android.app.Activity val$activity -> a
+    boolean isPermissionGranted(java.lang.String) -> a
+    void askForPermission(java.lang.String,int) -> b
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$2 -> com.mr.flutter.plugin.filepicker.b$b:
+    android.content.Intent val$data -> e
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate this$0 -> f
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$3 -> com.mr.flutter.plugin.filepicker.b$c:
+    boolean val$status -> a
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate this$0 -> b
+com.mr.flutter.plugin.filepicker.FilePickerDelegate$PermissionManager -> com.mr.flutter.plugin.filepicker.b$d:
+    boolean isPermissionGranted(java.lang.String) -> a
+    void askForPermission(java.lang.String,int) -> b
+com.mr.flutter.plugin.filepicker.FilePickerPlugin -> com.mr.flutter.plugin.filepicker.FilePickerPlugin:
+    android.app.Application application -> c
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver observer -> f
+    java.lang.String fileType -> i
+    android.app.Activity activity -> g
+    io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding pluginBinding -> d
+    boolean isMultipleSelection -> j
+    io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding activityBinding -> a
+    boolean withData -> k
+    io.flutter.plugin.common.MethodChannel channel -> h
+    androidx.lifecycle.Lifecycle lifecycle -> e
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate delegate -> b
+    void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> a
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> b
+    void onDetachedFromActivity() -> c
+    void onReattachedToActivityForConfigChanges(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> d
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
+    void onDetachedFromActivityForConfigChanges() -> f
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> g
+    com.mr.flutter.plugin.filepicker.FilePickerDelegate access$100(com.mr.flutter.plugin.filepicker.FilePickerPlugin) -> h
+    java.lang.String resolveType(java.lang.String) -> i
+    void setup(io.flutter.plugin.common.BinaryMessenger,android.app.Application,android.app.Activity,io.flutter.plugin.common.PluginRegistry$Registrar,io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> j
+    void tearDown() -> k
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$1 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$a:
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin this$0 -> a
+    void onCancel(java.lang.Object) -> a
+    void onListen(java.lang.Object,io.flutter.plugin.common.EventChannel$EventSink) -> c
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$LifeCycleObserver:
+    android.app.Activity thisActivity -> e
+    void onResume(androidx.lifecycle.LifecycleOwner) -> a
+    void onDestroy(androidx.lifecycle.LifecycleOwner) -> b
+    void onCreate(androidx.lifecycle.LifecycleOwner) -> c
+    void onPause(androidx.lifecycle.LifecycleOwner) -> e
+    void onStop(androidx.lifecycle.LifecycleOwner) -> f
+    void onStart(androidx.lifecycle.LifecycleOwner) -> g
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b:
+    io.flutter.plugin.common.MethodChannel$Result methodResult -> a
+    android.os.Handler handler -> b
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+    void notImplemented() -> c
+    io.flutter.plugin.common.MethodChannel$Result access$000(com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper) -> d
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper$1 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b$a:
+    java.lang.Object val$result -> e
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper this$0 -> f
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper$2 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b$b:
+    java.lang.String val$errorMessage -> f
+    java.lang.Object val$errorDetails -> g
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper this$0 -> h
+    java.lang.String val$errorCode -> e
+com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper$3 -> com.mr.flutter.plugin.filepicker.FilePickerPlugin$b$c:
+    com.mr.flutter.plugin.filepicker.FilePickerPlugin$MethodResultWrapper this$0 -> e
+com.mr.flutter.plugin.filepicker.FileUtils -> com.mr.flutter.plugin.filepicker.c:
+    boolean clearCache(android.content.Context) -> a
+    java.lang.String getDirectoryPath(java.lang.Class,java.lang.Object) -> b
+    java.lang.String getDocumentPathFromTreeUri(android.net.Uri) -> c
+    java.lang.String getFileName(android.net.Uri,android.content.Context) -> d
+    java.lang.String getFullPathFromTreeUri(android.net.Uri,android.content.Context) -> e
+    java.lang.String[] getMimeTypes(java.util.ArrayList) -> f
+    java.lang.String getVolumeIdFromTreeUri(android.net.Uri) -> g
+    java.lang.String getVolumePath(java.lang.String,android.content.Context) -> h
+    boolean isDownloadsDocument(android.net.Uri) -> i
+    void loadData(java.io.File,com.mr.flutter.plugin.filepicker.FileInfo$Builder) -> j
+    com.mr.flutter.plugin.filepicker.FileInfo openFileStream(android.content.Context,android.net.Uri,boolean) -> k
 com.squareup.okhttp.Credentials -> e.b.a.a:
     java.lang.String basic(java.lang.String,java.lang.String) -> a
 com.squareup.okhttp.Headers -> e.b.a.b:
@@ -17357,6 +18204,223 @@ com.squareup.okhttp.internal.http.StatusLine -> e.b.a.g.a.a:
     int code -> b
     java.lang.String message -> c
     com.squareup.okhttp.internal.http.StatusLine parse(java.lang.String) -> a
+com.tekartik.sqflite.Database -> e.c.a.a:
+    android.database.sqlite.SQLiteDatabase sqliteDatabase -> e
+    boolean inTransaction -> f
+    int logLevel -> d
+    boolean singleInstance -> a
+    java.lang.String path -> b
+    int id -> c
+    void close() -> a
+    void deleteDatabase(java.lang.String) -> b
+    android.database.sqlite.SQLiteDatabase getReadableDatabase() -> c
+    java.lang.String getThreadLogPrefix() -> d
+    java.lang.String getThreadLogTag() -> e
+    android.database.sqlite.SQLiteDatabase getWritableDatabase() -> f
+    void open() -> g
+    void openReadOnly() -> h
+com.tekartik.sqflite.Database$1 -> e.c.a.a$a:
+com.tekartik.sqflite.LogLevel -> e.c.a.b:
+    java.lang.Integer getLogLevel(io.flutter.plugin.common.MethodCall) -> a
+    boolean hasSqlLevel(int) -> b
+    boolean hasVerboseLevel(int) -> c
+com.tekartik.sqflite.SqflitePlugin -> e.c.a.c:
+    android.content.Context context -> a
+    java.lang.Object openCloseLocker -> h
+    java.lang.String databasesPath -> i
+    android.os.HandlerThread handlerThread -> k
+    int databaseId -> j
+    java.util.Map databaseMap -> m
+    java.lang.Object databaseMapLocker -> g
+    int logLevel -> f
+    int THREAD_PRIORITY -> e
+    java.util.Map _singleInstancesByPath -> c
+    android.os.Handler handler -> l
+    boolean QUERY_AS_MAP_LIST -> d
+    io.flutter.plugin.common.MethodChannel methodChannel -> b
+    boolean isInMemoryPath(java.lang.String) -> A
+    java.util.Map makeOpenResult(int,boolean,boolean) -> B
+    void onAttachedToEngine(android.content.Context,io.flutter.plugin.common.BinaryMessenger) -> C
+    void onBatchCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> D
+    void onCloseDatabaseCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> E
+    void onDebugCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> F
+    void onDebugModeCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> G
+    void onDeleteDatabaseCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> H
+    void onExecuteCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> I
+    void onGetDatabasesPathCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> J
+    void onInsertCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> K
+    void onOpenDatabaseCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> L
+    void onOptionsCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> M
+    void onQueryCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> N
+    void onUpdateCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> O
+    boolean query(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> P
+    java.lang.String toString(java.lang.Object) -> Q
+    boolean update(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> R
+    boolean access$100(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> a
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> b
+    int access$1000() -> c
+    boolean access$200(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> d
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
+    boolean access$300(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> f
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> g
+    boolean access$400(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> h
+    com.tekartik.sqflite.Database access$500(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database,io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> i
+    java.lang.Object access$600() -> j
+    void access$700(com.tekartik.sqflite.SqflitePlugin,java.lang.Exception,com.tekartik.sqflite.operation.Operation,com.tekartik.sqflite.Database) -> k
+    java.lang.Object access$800() -> l
+    void access$900(com.tekartik.sqflite.SqflitePlugin,com.tekartik.sqflite.Database) -> m
+    void closeDatabase(com.tekartik.sqflite.Database) -> n
+    java.util.List cursorRowToList(android.database.Cursor,int) -> o
+    java.util.Map cursorRowToMap(android.database.Cursor) -> p
+    java.lang.Object cursorValue(android.database.Cursor,int) -> q
+    boolean execute(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> r
+    com.tekartik.sqflite.Database executeOrError(com.tekartik.sqflite.Database,io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> s
+    boolean executeOrError(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> t
+    java.util.Map fixMap(java.util.Map) -> u
+    com.tekartik.sqflite.Database getDatabase(int) -> v
+    com.tekartik.sqflite.Database getDatabaseOrError(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> w
+    com.tekartik.sqflite.SqlCommand getSqlCommand(io.flutter.plugin.common.MethodCall) -> x
+    void handleException(java.lang.Exception,com.tekartik.sqflite.operation.Operation,com.tekartik.sqflite.Database) -> y
+    boolean insert(com.tekartik.sqflite.Database,com.tekartik.sqflite.operation.Operation) -> z
+com.tekartik.sqflite.SqflitePlugin$1 -> e.c.a.c$a:
+    com.tekartik.sqflite.Database val$database -> g
+    com.tekartik.sqflite.SqflitePlugin this$0 -> h
+    io.flutter.plugin.common.MethodCall val$call -> e
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> f
+com.tekartik.sqflite.SqflitePlugin$2 -> e.c.a.c$b:
+    com.tekartik.sqflite.Database val$database -> g
+    com.tekartik.sqflite.SqflitePlugin this$0 -> h
+    io.flutter.plugin.common.MethodCall val$call -> e
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> f
+com.tekartik.sqflite.SqflitePlugin$3 -> e.c.a.c$c:
+    com.tekartik.sqflite.Database val$database -> g
+    com.tekartik.sqflite.SqflitePlugin this$0 -> h
+    io.flutter.plugin.common.MethodCall val$call -> e
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> f
+com.tekartik.sqflite.SqflitePlugin$4 -> e.c.a.c$d:
+    com.tekartik.sqflite.Database val$database -> e
+    com.tekartik.sqflite.SqflitePlugin this$0 -> h
+    io.flutter.plugin.common.MethodCall val$call -> f
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> g
+com.tekartik.sqflite.SqflitePlugin$5 -> e.c.a.c$e:
+    com.tekartik.sqflite.Database val$database -> g
+    com.tekartik.sqflite.SqflitePlugin this$0 -> h
+    io.flutter.plugin.common.MethodCall val$call -> e
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> f
+com.tekartik.sqflite.SqflitePlugin$6 -> e.c.a.c$f:
+    com.tekartik.sqflite.Database val$database -> i
+    java.lang.String val$path -> f
+    java.lang.Boolean val$readOnly -> h
+    int val$databaseId -> l
+    com.tekartik.sqflite.SqflitePlugin this$0 -> m
+    boolean val$singleInstance -> k
+    io.flutter.plugin.common.MethodCall val$call -> j
+    boolean val$inMemory -> e
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> g
+com.tekartik.sqflite.SqflitePlugin$7 -> e.c.a.c$g:
+    com.tekartik.sqflite.Database val$database -> e
+    com.tekartik.sqflite.SqflitePlugin this$0 -> g
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> f
+com.tekartik.sqflite.SqflitePlugin$8 -> e.c.a.c$h:
+    java.lang.String val$path -> f
+    com.tekartik.sqflite.Database val$openedDatabase -> e
+    com.tekartik.sqflite.SqflitePlugin this$0 -> h
+    com.tekartik.sqflite.SqflitePlugin$BgResult val$bgResult -> g
+com.tekartik.sqflite.SqflitePlugin$BgResult -> e.c.a.c$i:
+    android.os.Handler handler -> a
+    io.flutter.plugin.common.MethodChannel$Result result -> b
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+    void notImplemented() -> c
+    io.flutter.plugin.common.MethodChannel$Result access$1100(com.tekartik.sqflite.SqflitePlugin$BgResult) -> d
+com.tekartik.sqflite.SqflitePlugin$BgResult$1 -> e.c.a.c$i$a:
+    java.lang.Object val$results -> e
+    com.tekartik.sqflite.SqflitePlugin$BgResult this$1 -> f
+com.tekartik.sqflite.SqflitePlugin$BgResult$2 -> e.c.a.c$i$b:
+    java.lang.String val$errorMessage -> f
+    java.lang.Object val$data -> g
+    com.tekartik.sqflite.SqflitePlugin$BgResult this$1 -> h
+    java.lang.String val$errorCode -> e
+com.tekartik.sqflite.SqflitePlugin$BgResult$3 -> e.c.a.c$i$c:
+    com.tekartik.sqflite.SqflitePlugin$BgResult this$1 -> e
+com.tekartik.sqflite.SqlCommand -> e.c.a.d:
+    java.util.List rawArguments -> b
+    java.lang.String sql -> a
+    java.util.Map fixMap(java.util.Map) -> a
+    java.lang.String[] getQuerySqlArguments() -> b
+    java.lang.String[] getQuerySqlArguments(java.util.List) -> c
+    java.util.List getRawSqlArguments() -> d
+    java.lang.String getSql() -> e
+    java.lang.Object[] getSqlArguments() -> f
+    java.lang.Object[] getSqlArguments(java.util.List) -> g
+    java.util.List getStringQuerySqlArguments(java.util.List) -> h
+    com.tekartik.sqflite.SqlCommand sanitizeForQuery() -> i
+    java.lang.String toString(java.lang.Object) -> j
+    java.lang.Object toValue(java.lang.Object) -> k
+com.tekartik.sqflite.dev.Debug -> e.c.a.e.a:
+    boolean LOGV -> a
+    boolean _EXTRA_LOGV -> b
+    boolean EXTRA_LOGV -> c
+com.tekartik.sqflite.operation.BaseOperation -> e.c.a.f.a:
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+    com.tekartik.sqflite.operation.OperationResult getOperationResult() -> k
+com.tekartik.sqflite.operation.BaseReadOperation -> e.c.a.f.b:
+    com.tekartik.sqflite.SqlCommand getSqlCommand() -> d
+    boolean getNoResult() -> e
+    java.lang.Boolean getInTransaction() -> f
+    java.lang.Boolean getBoolean(java.lang.String) -> g
+    boolean getContinueOnError() -> h
+    java.lang.String getSql() -> i
+    java.util.List getSqlArguments() -> j
+com.tekartik.sqflite.operation.BatchOperation -> e.c.a.f.c:
+    java.util.Map map -> a
+    com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult operationResult -> b
+    boolean noResult -> c
+    java.lang.Object getArgument(java.lang.String) -> c
+    boolean getNoResult() -> e
+    com.tekartik.sqflite.operation.OperationResult getOperationResult() -> k
+    java.lang.String getMethod() -> l
+    java.util.Map getOperationError() -> m
+    java.util.Map getOperationSuccessResult() -> n
+    void handleError(io.flutter.plugin.common.MethodChannel$Result) -> o
+    void handleErrorContinue(java.util.List) -> p
+    void handleSuccess(java.util.List) -> q
+com.tekartik.sqflite.operation.BatchOperation$BatchOperationResult -> e.c.a.f.c$a:
+    java.lang.Object errorData -> d
+    java.lang.Object result -> a
+    java.lang.String errorMessage -> c
+    java.lang.String errorCode -> b
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+com.tekartik.sqflite.operation.ExecuteOperation -> e.c.a.f.d:
+    com.tekartik.sqflite.SqlCommand command -> a
+    java.lang.Boolean inTransaction -> c
+    io.flutter.plugin.common.MethodChannel$Result result -> b
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+    java.lang.Object getArgument(java.lang.String) -> c
+    com.tekartik.sqflite.SqlCommand getSqlCommand() -> d
+    java.lang.Boolean getInTransaction() -> f
+com.tekartik.sqflite.operation.MethodCallOperation -> e.c.a.f.e:
+    io.flutter.plugin.common.MethodCall methodCall -> a
+    com.tekartik.sqflite.operation.MethodCallOperation$Result result -> b
+    java.lang.Object getArgument(java.lang.String) -> c
+    com.tekartik.sqflite.operation.OperationResult getOperationResult() -> k
+com.tekartik.sqflite.operation.MethodCallOperation$Result -> e.c.a.f.e$a:
+    io.flutter.plugin.common.MethodChannel$Result result -> a
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+com.tekartik.sqflite.operation.Operation -> e.c.a.f.f:
+    java.lang.Object getArgument(java.lang.String) -> c
+    com.tekartik.sqflite.SqlCommand getSqlCommand() -> d
+    boolean getNoResult() -> e
+    java.lang.Boolean getInTransaction() -> f
+com.tekartik.sqflite.operation.OperationResult -> e.c.a.f.g:
+    void error(java.lang.String,java.lang.String,java.lang.Object) -> a
+    void success(java.lang.Object) -> b
+com.tekartik.sqflite.operation.SqlErrorInfo -> e.c.a.f.h:
+    java.util.Map getMap(com.tekartik.sqflite.operation.Operation) -> a
 io.flutter.FlutterInjector -> f.a.a:
     java.util.concurrent.ExecutorService executorService -> d
     io.flutter.embedding.engine.FlutterJNI$Factory flutterJniFactory -> c
@@ -17860,45 +18924,50 @@ io.flutter.embedding.engine.FlutterEngineConnectionRegistry -> io.flutter.embedd
     boolean onActivityResult(int,int,android.content.Intent) -> a
     void onNewIntent(android.content.Intent) -> b
     void onRestoreInstanceState(android.os.Bundle) -> c
-    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> d
-    void onSaveInstanceState(android.os.Bundle) -> e
-    void onUserLeaveHint() -> f
-    void attachToActivity(io.flutter.embedding.android.ExclusiveAppComponent,androidx.lifecycle.Lifecycle) -> g
-    void detachFromActivity() -> h
-    void add(io.flutter.embedding.engine.plugins.FlutterPlugin) -> i
-    void detachFromActivityForConfigChanges() -> j
-    void attachToActivityInternal(android.app.Activity,androidx.lifecycle.Lifecycle) -> k
-    android.app.Activity attachedActivity() -> l
-    void destroy() -> m
-    void detachFromActivityInternal() -> n
-    void detachFromAppComponent() -> o
-    void detachFromBroadcastReceiver() -> p
-    void detachFromContentProvider() -> q
-    void detachFromService() -> r
-    boolean has(java.lang.Class) -> s
-    boolean isAttachedToActivity() -> t
-    boolean isAttachedToBroadcastReceiver() -> u
-    boolean isAttachedToContentProvider() -> v
-    boolean isAttachedToService() -> w
-    void remove(java.lang.Class) -> x
-    void remove(java.util.Set) -> y
-    void removeAll() -> z
+    void onSaveInstanceState(android.os.Bundle) -> d
+    void onUserLeaveHint() -> e
+    void attachToActivity(io.flutter.embedding.android.ExclusiveAppComponent,androidx.lifecycle.Lifecycle) -> f
+    void detachFromActivity() -> g
+    void add(io.flutter.embedding.engine.plugins.FlutterPlugin) -> h
+    void detachFromActivityForConfigChanges() -> i
+    void attachToActivityInternal(android.app.Activity,androidx.lifecycle.Lifecycle) -> j
+    android.app.Activity attachedActivity() -> k
+    void destroy() -> l
+    void detachFromActivityInternal() -> m
+    void detachFromAppComponent() -> n
+    void detachFromBroadcastReceiver() -> o
+    void detachFromContentProvider() -> p
+    void detachFromService() -> q
+    boolean has(java.lang.Class) -> r
+    boolean isAttachedToActivity() -> s
+    boolean isAttachedToBroadcastReceiver() -> t
+    boolean isAttachedToContentProvider() -> u
+    boolean isAttachedToService() -> v
+    void remove(java.lang.Class) -> w
+    void remove(java.util.Set) -> x
+    void removeAll() -> y
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$1 -> io.flutter.embedding.engine.d$a:
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$DefaultFlutterAssets -> io.flutter.embedding.engine.d$b:
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineActivityPluginBinding -> io.flutter.embedding.engine.d$c:
-    java.util.Set onActivityResultListeners -> c
-    java.util.Set onNewIntentListeners -> d
-    java.util.Set onUserLeaveHintListeners -> e
-    java.util.Set onSaveInstanceStateListeners -> f
-    java.util.Set onRequestPermissionsResultListeners -> b
+    java.util.Set onSaveInstanceStateListeners -> g
+    java.util.Set onRequestPermissionsResultListeners -> c
+    java.util.Set onActivityResultListeners -> d
+    java.util.Set onNewIntentListeners -> e
+    java.util.Set onUserLeaveHintListeners -> f
+    io.flutter.embedding.engine.plugins.lifecycle.HiddenLifecycleReference hiddenLifecycleReference -> b
     android.app.Activity activity -> a
-    boolean onActivityResult(int,int,android.content.Intent) -> a
-    void onNewIntent(android.content.Intent) -> b
-    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> c
+    void addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> a
+    java.lang.Object getLifecycle() -> b
+    void addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
     android.app.Activity getActivity() -> d
-    void onRestoreInstanceState(android.os.Bundle) -> e
-    void onSaveInstanceState(android.os.Bundle) -> f
-    void onUserLeaveHint() -> g
+    void removeActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> e
+    void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> f
+    boolean onActivityResult(int,int,android.content.Intent) -> g
+    void onNewIntent(android.content.Intent) -> h
+    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> i
+    void onRestoreInstanceState(android.os.Bundle) -> j
+    void onSaveInstanceState(android.os.Bundle) -> k
+    void onUserLeaveHint() -> l
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineBroadcastReceiverPluginBinding -> io.flutter.embedding.engine.d$d:
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineContentProviderPluginBinding -> io.flutter.embedding.engine.d$e:
 io.flutter.embedding.engine.FlutterEngineConnectionRegistry$FlutterEngineServicePluginBinding -> io.flutter.embedding.engine.d$f:
@@ -18126,7 +19195,7 @@ io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding -> io.flu
     android.content.Context getApplicationContext() -> a
     io.flutter.plugin.common.BinaryMessenger getBinaryMessenger() -> b
 io.flutter.embedding.engine.plugins.PluginRegistry -> io.flutter.embedding.engine.i.b:
-    void add(io.flutter.embedding.engine.plugins.FlutterPlugin) -> i
+    void add(io.flutter.embedding.engine.plugins.FlutterPlugin) -> h
 io.flutter.embedding.engine.plugins.activity.ActivityAware -> io.flutter.embedding.engine.i.c.a:
     void onAttachedToActivity(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> a
     void onDetachedFromActivity() -> c
@@ -18136,17 +19205,21 @@ io.flutter.embedding.engine.plugins.activity.ActivityControlSurface -> io.flutte
     boolean onActivityResult(int,int,android.content.Intent) -> a
     void onNewIntent(android.content.Intent) -> b
     void onRestoreInstanceState(android.os.Bundle) -> c
-    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> d
-    void onSaveInstanceState(android.os.Bundle) -> e
-    void onUserLeaveHint() -> f
-    void attachToActivity(io.flutter.embedding.android.ExclusiveAppComponent,androidx.lifecycle.Lifecycle) -> g
-    void detachFromActivity() -> h
-    void detachFromActivityForConfigChanges() -> j
+    void onSaveInstanceState(android.os.Bundle) -> d
+    void onUserLeaveHint() -> e
+    void attachToActivity(io.flutter.embedding.android.ExclusiveAppComponent,androidx.lifecycle.Lifecycle) -> f
+    void detachFromActivity() -> g
+    void detachFromActivityForConfigChanges() -> i
 io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding -> io.flutter.embedding.engine.i.c.c:
+    void addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> a
+    java.lang.Object getLifecycle() -> b
+    void addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
     android.app.Activity getActivity() -> d
+    void removeActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> e
+    void removeRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> f
 io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding$OnSaveInstanceStateListener -> io.flutter.embedding.engine.i.c.c$a:
     void onRestoreInstanceState(android.os.Bundle) -> c
-    void onSaveInstanceState(android.os.Bundle) -> e
+    void onSaveInstanceState(android.os.Bundle) -> d
 io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverAware -> io.flutter.embedding.engine.i.d.a:
     void onAttachedToBroadcastReceiver(io.flutter.embedding.engine.plugins.broadcastreceiver.BroadcastReceiverPluginBinding) -> a
     void onDetachedFromBroadcastReceiver() -> b
@@ -18155,6 +19228,8 @@ io.flutter.embedding.engine.plugins.contentprovider.ContentProviderAware -> io.f
     void onAttachedToContentProvider(io.flutter.embedding.engine.plugins.contentprovider.ContentProviderPluginBinding) -> a
     void onDetachedFromContentProvider() -> b
 io.flutter.embedding.engine.plugins.contentprovider.ContentProviderPluginBinding -> io.flutter.embedding.engine.i.e.b:
+io.flutter.embedding.engine.plugins.lifecycle.FlutterLifecycleAdapter -> io.flutter.embedding.engine.plugins.lifecycle.a:
+    androidx.lifecycle.Lifecycle getActivityLifecycle(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding) -> a
 io.flutter.embedding.engine.plugins.service.ServiceAware -> io.flutter.embedding.engine.i.f.a:
     void onAttachedToService(io.flutter.embedding.engine.plugins.service.ServicePluginBinding) -> a
     void onDetachedFromService() -> b
@@ -18772,11 +19847,13 @@ io.flutter.plugin.common.PluginRegistry$ActivityResultListener -> f.a.c.a.m:
     boolean onActivityResult(int,int,android.content.Intent) -> a
 io.flutter.plugin.common.PluginRegistry$NewIntentListener -> f.a.c.a.n:
     boolean onNewIntent(android.content.Intent) -> b
-io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener -> f.a.c.a.o:
-    boolean onRequestPermissionsResult(int,java.lang.String[],int[]) -> d
-io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener -> f.a.c.a.p:
-    void onUserLeaveHint() -> f
-io.flutter.plugin.common.StandardMessageCodec -> f.a.c.a.q:
+io.flutter.plugin.common.PluginRegistry$Registrar -> f.a.c.a.o:
+    io.flutter.plugin.common.PluginRegistry$Registrar addActivityResultListener(io.flutter.plugin.common.PluginRegistry$ActivityResultListener) -> a
+    io.flutter.plugin.common.PluginRegistry$Registrar addRequestPermissionsResultListener(io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener) -> c
+io.flutter.plugin.common.PluginRegistry$RequestPermissionsResultListener -> f.a.c.a.p:
+io.flutter.plugin.common.PluginRegistry$UserLeaveHintListener -> f.a.c.a.q:
+    void onUserLeaveHint() -> e
+io.flutter.plugin.common.StandardMessageCodec -> f.a.c.a.r:
     java.nio.charset.Charset UTF8 -> c
     io.flutter.plugin.common.StandardMessageCodec INSTANCE -> a
     boolean LITTLE_ENDIAN -> b
@@ -18796,9 +19873,9 @@ io.flutter.plugin.common.StandardMessageCodec -> f.a.c.a.q:
     void writeLong(java.io.ByteArrayOutputStream,long) -> n
     void writeSize(java.io.ByteArrayOutputStream,int) -> o
     void writeValue(java.io.ByteArrayOutputStream,java.lang.Object) -> p
-io.flutter.plugin.common.StandardMessageCodec$ExposedByteArrayOutputStream -> f.a.c.a.q$a:
+io.flutter.plugin.common.StandardMessageCodec$ExposedByteArrayOutputStream -> f.a.c.a.r$a:
     byte[] buffer() -> a
-io.flutter.plugin.common.StandardMethodCodec -> f.a.c.a.r:
+io.flutter.plugin.common.StandardMethodCodec -> f.a.c.a.s:
     io.flutter.plugin.common.StandardMessageCodec messageCodec -> a
     io.flutter.plugin.common.StandardMethodCodec INSTANCE -> b
     java.nio.ByteBuffer encodeSuccessEnvelope(java.lang.Object) -> a
@@ -18808,7 +19885,7 @@ io.flutter.plugin.common.StandardMethodCodec -> f.a.c.a.r:
     java.nio.ByteBuffer encodeMethodCall(io.flutter.plugin.common.MethodCall) -> e
     java.nio.ByteBuffer encodeErrorEnvelope(java.lang.String,java.lang.String,java.lang.Object) -> f
     java.lang.String getStackTrace(java.lang.Throwable) -> g
-io.flutter.plugin.common.StringCodec -> f.a.c.a.s:
+io.flutter.plugin.common.StringCodec -> f.a.c.a.t:
     java.nio.charset.Charset UTF8 -> a
     io.flutter.plugin.common.StringCodec INSTANCE -> b
     java.lang.Object decodeMessage(java.nio.ByteBuffer) -> a
@@ -19814,7 +20891,244 @@ io.flutter.plugins.firebase.firestore.streamhandler.TransactionStreamHandler$OnT
     void onStarted(com.google.firebase.firestore.Transaction) -> a
 io.flutter.plugins.firebase.firestore.utils.ExceptionConverter -> io.flutter.plugins.firebase.firestore.w.a:
     java.util.Map createDetails(java.lang.Exception) -> a
-io.flutter.plugins.pathprovider.PathProviderPlugin -> io.flutter.plugins.a.a:
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$1rJiK38ofhZ6zJ2sSw6aq12A5qM -> io.flutter.plugins.firebase.storage.a:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$5OipvsmK-rvYaZK64DrzSnpznzk -> io.flutter.plugins.firebase.storage.b:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$5OtTP8rbEamTJZR0oFPkxb4PrDk -> io.flutter.plugins.firebase.storage.c:
+    com.google.android.gms.tasks.TaskCompletionSource f$1 -> f
+    java.util.Map f$0 -> e
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$82tZh8tXauOflUCfxDSCSg88Bh4 -> io.flutter.plugins.firebase.storage.d:
+    com.google.android.gms.tasks.TaskCompletionSource f$1 -> f
+    java.util.Map f$0 -> e
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$C3Ka_3_IyaNcx1GMmRzpGhbHvfI -> io.flutter.plugins.firebase.storage.e:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$CdMb7YV47JtwmO2S5iPAhS2Hj3k -> io.flutter.plugins.firebase.storage.f:
+    io.flutter.plugin.common.MethodChannel$Result f$0 -> a
+    void onComplete(com.google.android.gms.tasks.Task) -> a
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$K-vpkQOQsjTMXQ87Se8EnXs0rcQ -> io.flutter.plugins.firebase.storage.g:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$LNEILVX6m9GNMe_1v7rabfG-oqo -> io.flutter.plugins.firebase.storage.h:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$OcCRGwA928KZOjFjZKKS1-3jrOc -> io.flutter.plugins.firebase.storage.i:
+    com.google.android.gms.tasks.TaskCompletionSource f$0 -> e
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$UDqUrPgS1UvWHHn3MNgdhWax07g -> io.flutter.plugins.firebase.storage.j:
+    com.google.android.gms.tasks.TaskCompletionSource f$1 -> f
+    java.util.Map f$0 -> e
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$VwH9aHkQs8QslZuHhuVwOocFZPs -> io.flutter.plugins.firebase.storage.k:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$eyg3YM_Rfjdlh6zzSJR4Hocj1FE -> io.flutter.plugins.firebase.storage.l:
+    com.google.android.gms.tasks.TaskCompletionSource f$0 -> e
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$fjw_lkaWiV4biCI_kbfLsof_M9s -> io.flutter.plugins.firebase.storage.m:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$q-Zqu-umdXDVD9yjX50b1HygE-A -> io.flutter.plugins.firebase.storage.n:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$rGZYFOWhkih8ublpx098Rxhei88 -> io.flutter.plugins.firebase.storage.o:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$sHh0bZdzmxwv4QxVoPvRc_EwFtM -> io.flutter.plugins.firebase.storage.p:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$vye8IFPeo4NV6-u-wBQZ-2bqqng -> io.flutter.plugins.firebase.storage.q:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStoragePlugin$zcea5hOdCfKbkZmm_mDEiFntPpU -> io.flutter.plugins.firebase.storage.r:
+    com.google.android.gms.tasks.TaskCompletionSource f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin f$0 -> e
+    java.util.Map f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$3lFHcGw720qSh_40optg_VCHT2c -> io.flutter.plugins.firebase.storage.s:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    com.google.android.gms.tasks.TaskCompletionSource f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$ADkhTUjpLZYqFPWE9OHUBLivTFw -> io.flutter.plugins.firebase.storage.t:
+    com.google.firebase.storage.StorageTask$ProvideError f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    io.flutter.plugin.common.MethodChannel f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$HaXdGq68Tq7YCTPCNU0zkCLcNhU -> io.flutter.plugins.firebase.storage.u:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    com.google.android.gms.tasks.TaskCompletionSource f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$KND5_Jz30k0n852jRUYzvq7YZPA -> io.flutter.plugins.firebase.storage.v:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> a
+    io.flutter.plugin.common.MethodChannel f$1 -> b
+    void onFailure(java.lang.Exception) -> b
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$Sdfy39rDY-CbK-vx9lOwnTPAlm0 -> io.flutter.plugins.firebase.storage.w:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> a
+    io.flutter.plugin.common.MethodChannel f$1 -> b
+    void onCanceled() -> a
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$W9MmAs4t7z7jvt3949rNuPseUuE -> io.flutter.plugins.firebase.storage.x:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> a
+    io.flutter.plugin.common.MethodChannel f$1 -> b
+    void onProgress(java.lang.Object) -> a
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$bpECtUb0b8Tt1jkj2fP61u8qUaY -> io.flutter.plugins.firebase.storage.y:
+    java.lang.Exception f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    io.flutter.plugin.common.MethodChannel f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$da4Bjj9A6u5DVW3bOUHZGpgxJ5k -> io.flutter.plugins.firebase.storage.z:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> a
+    io.flutter.plugin.common.MethodChannel f$1 -> b
+    void onPaused(java.lang.Object) -> a
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$hklakAx2KE1evYMyYjUWEjpxPkA -> io.flutter.plugins.firebase.storage.a0:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    com.google.android.gms.tasks.TaskCompletionSource f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$iFRYNPFhkhxfSeY-a9l6l9mpQwI -> io.flutter.plugins.firebase.storage.b0:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> a
+    io.flutter.plugin.common.MethodChannel f$1 -> b
+    void onSuccess(java.lang.Object) -> d
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$l30n8-6B533ZYzRJRvaSfu1BF1M -> io.flutter.plugins.firebase.storage.c0:
+    com.google.firebase.storage.StorageTask$ProvideError f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    io.flutter.plugin.common.MethodChannel f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$ocOZiXLH4HkG_GfoO9ORiZ0JuuI -> io.flutter.plugins.firebase.storage.d0:
+    com.google.firebase.storage.StorageTask$ProvideError f$2 -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    io.flutter.plugin.common.MethodChannel f$1 -> f
+io.flutter.plugins.firebase.storage.-$$Lambda$FlutterFirebaseStorageTask$xelrvpQMo5lSSgyXgDy3CaQTMzE -> io.flutter.plugins.firebase.storage.e0:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask f$0 -> e
+    io.flutter.plugin.common.MethodChannel f$1 -> f
+io.flutter.plugins.firebase.storage.FlutterFirebaseStorageException -> io.flutter.plugins.firebase.storage.f0:
+    int code -> e
+    java.lang.String getCode() -> a
+io.flutter.plugins.firebase.storage.FlutterFirebaseStoragePlugin -> io.flutter.plugins.firebase.storage.g0:
+    io.flutter.plugin.common.MethodChannel channel -> a
+    void lambda$taskPause$12(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> A
+    void lambda$taskPutData$8(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> B
+    void lambda$taskPutData$8$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> C
+    void lambda$taskPutFile$10(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> D
+    void lambda$taskPutFile$10$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> E
+    void lambda$taskPutString$9(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> F
+    void lambda$taskPutString$9$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> G
+    void lambda$taskResume$13(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> H
+    void lambda$taskWriteToFile$11(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> I
+    void lambda$taskWriteToFile$11$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> J
+    void lambda$useEmulator$0(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> K
+    void lambda$useEmulator$0$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> L
+    java.util.Map parseListResult(com.google.firebase.storage.ListResult) -> M
+    com.google.firebase.storage.StorageMetadata parseMetadata(java.util.Map) -> N
+    java.util.Map parseMetadata(com.google.firebase.storage.StorageMetadata) -> O
+    com.google.android.gms.tasks.Task referenceDelete(java.util.Map) -> P
+    com.google.android.gms.tasks.Task referenceGetData(java.util.Map) -> Q
+    com.google.android.gms.tasks.Task referenceGetDownloadURL(java.util.Map) -> R
+    com.google.android.gms.tasks.Task referenceGetMetadata(java.util.Map) -> S
+    com.google.android.gms.tasks.Task referenceList(java.util.Map) -> T
+    com.google.android.gms.tasks.Task referenceListAll(java.util.Map) -> U
+    com.google.android.gms.tasks.Task referenceUpdateMetadata(java.util.Map) -> V
+    byte[] stringToByteData(java.lang.String,int) -> W
+    com.google.android.gms.tasks.Task taskCancel(java.util.Map) -> X
+    com.google.android.gms.tasks.Task taskPause(java.util.Map) -> Y
+    com.google.android.gms.tasks.Task taskPutData(java.util.Map) -> Z
+    java.util.Map getExceptionDetails(java.lang.Exception) -> a
+    com.google.android.gms.tasks.Task taskPutFile(java.util.Map) -> a0
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> b
+    com.google.android.gms.tasks.Task taskPutString(java.util.Map) -> b0
+    java.lang.Long getLongValue(java.lang.Object) -> c
+    com.google.android.gms.tasks.Task taskResume(java.util.Map) -> c0
+    com.google.firebase.storage.StorageReference getReference(java.util.Map) -> d
+    com.google.android.gms.tasks.Task taskWriteToFile(java.util.Map) -> d0
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
+    com.google.android.gms.tasks.Task useEmulator(java.util.Map) -> e0
+    com.google.firebase.storage.FirebaseStorage getStorage(java.util.Map) -> f
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> g
+    void initInstance(io.flutter.plugin.common.BinaryMessenger) -> h
+    void lambda$didReinitializeFirebaseCore$17(com.google.android.gms.tasks.TaskCompletionSource) -> i
+    void lambda$getPluginConstantsForFirebaseApp$16(com.google.android.gms.tasks.TaskCompletionSource) -> j
+    void lambda$onMethodCall$15(io.flutter.plugin.common.MethodChannel$Result,com.google.android.gms.tasks.Task) -> k
+    void lambda$referenceDelete$1(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> l
+    void lambda$referenceDelete$1$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> m
+    void lambda$referenceGetData$3(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> n
+    void lambda$referenceGetData$3$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> o
+    void lambda$referenceGetDownloadURL$2(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> p
+    void lambda$referenceGetDownloadURL$2$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> q
+    void lambda$referenceGetMetadata$4(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> r
+    void lambda$referenceGetMetadata$4$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> s
+    void lambda$referenceList$5(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> t
+    void lambda$referenceList$5$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> u
+    void lambda$referenceListAll$6(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> v
+    void lambda$referenceListAll$6$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> w
+    void lambda$referenceUpdateMetadata$7(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> x
+    void lambda$referenceUpdateMetadata$7$FlutterFirebaseStoragePlugin(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> y
+    void lambda$taskCancel$14(java.util.Map,com.google.android.gms.tasks.TaskCompletionSource) -> z
+io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask -> io.flutter.plugins.firebase.storage.h0:
+    java.lang.Object resumeSyncObject -> h
+    android.net.Uri fileUri -> e
+    java.lang.Object cancelSyncObject -> i
+    java.lang.Boolean destroyed -> k
+    java.lang.Object pauseSyncObject -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType type -> a
+    com.google.firebase.storage.StorageReference reference -> c
+    int handle -> b
+    java.util.concurrent.Executor taskExecutor -> m
+    com.google.firebase.storage.StorageTask storageTask -> j
+    com.google.firebase.storage.StorageMetadata metadata -> f
+    byte[] bytes -> d
+    android.util.SparseArray inProgressTasks -> l
+    void lambda$startTaskWithMethodChannel$6$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> A
+    void lambda$startTaskWithMethodChannel$7(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> B
+    void lambda$startTaskWithMethodChannel$7$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> C
+    void lambda$startTaskWithMethodChannel$8(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> D
+    void lambda$startTaskWithMethodChannel$8$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> E
+    void lambda$startTaskWithMethodChannel$9(io.flutter.plugin.common.MethodChannel) -> F
+    void lambda$startTaskWithMethodChannel$9$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel) -> G
+    java.util.Map parseDownloadTaskSnapshot(com.google.firebase.storage.FileDownloadTask$TaskSnapshot) -> H
+    java.util.Map parseTaskSnapshot(java.lang.Object) -> I
+    java.util.Map parseUploadTaskSnapshot(com.google.firebase.storage.UploadTask$TaskSnapshot) -> J
+    com.google.android.gms.tasks.Task pause() -> K
+    com.google.android.gms.tasks.Task resume() -> L
+    void startTaskWithMethodChannel(io.flutter.plugin.common.MethodChannel) -> M
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask uploadBytes(int,com.google.firebase.storage.StorageReference,byte[],com.google.firebase.storage.StorageMetadata) -> N
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask uploadFile(int,com.google.firebase.storage.StorageReference,android.net.Uri,com.google.firebase.storage.StorageMetadata) -> O
+    com.google.android.gms.tasks.Task cancel() -> a
+    void cancelInProgressTasks() -> b
+    void destroy() -> c
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask downloadFile(int,com.google.firebase.storage.StorageReference,java.io.File) -> d
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask getInProgressTaskForHandle(int) -> e
+    java.lang.Object getSnapshot() -> f
+    java.util.Map getTaskEventMap(java.lang.Object,java.lang.Exception) -> g
+    void lambda$cancel$2(com.google.android.gms.tasks.TaskCompletionSource) -> h
+    void lambda$cancel$2$FlutterFirebaseStorageTask(com.google.android.gms.tasks.TaskCompletionSource) -> i
+    void lambda$pause$0(com.google.android.gms.tasks.TaskCompletionSource) -> j
+    void lambda$pause$0$FlutterFirebaseStorageTask(com.google.android.gms.tasks.TaskCompletionSource) -> k
+    void lambda$resume$1(com.google.android.gms.tasks.TaskCompletionSource) -> l
+    void lambda$resume$1$FlutterFirebaseStorageTask(com.google.android.gms.tasks.TaskCompletionSource) -> m
+    void lambda$startTaskWithMethodChannel$10(io.flutter.plugin.common.MethodChannel) -> n
+    void lambda$startTaskWithMethodChannel$10$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel) -> o
+    void lambda$startTaskWithMethodChannel$11(io.flutter.plugin.common.MethodChannel,java.lang.Exception) -> p
+    void lambda$startTaskWithMethodChannel$11$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,java.lang.Exception) -> q
+    void lambda$startTaskWithMethodChannel$12(io.flutter.plugin.common.MethodChannel,java.lang.Exception) -> r
+    void lambda$startTaskWithMethodChannel$12$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,java.lang.Exception) -> s
+    void lambda$startTaskWithMethodChannel$3(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> t
+    void lambda$startTaskWithMethodChannel$3$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> u
+    void lambda$startTaskWithMethodChannel$4(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> v
+    void lambda$startTaskWithMethodChannel$4$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> w
+    void lambda$startTaskWithMethodChannel$5(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> x
+    void lambda$startTaskWithMethodChannel$5$FlutterFirebaseStorageTask(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> y
+    void lambda$startTaskWithMethodChannel$6(io.flutter.plugin.common.MethodChannel,com.google.firebase.storage.StorageTask$ProvideError) -> z
+io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType -> io.flutter.plugins.firebase.storage.h0$a:
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType DOWNLOAD -> g
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType FILE -> e
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType BYTES -> f
+    io.flutter.plugins.firebase.storage.FlutterFirebaseStorageTask$FlutterFirebaseStorageTaskType[] $VALUES -> h
+io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin -> io.flutter.plugins.a.a:
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> b
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
+io.flutter.plugins.pathprovider.PathProviderPlugin -> io.flutter.plugins.b.a:
     android.content.Context context -> a
     io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderImpl impl -> c
     io.flutter.plugin.common.MethodChannel channel -> b
@@ -19834,8 +21148,8 @@ io.flutter.plugins.pathprovider.PathProviderPlugin -> io.flutter.plugins.a.a:
     java.lang.String getPathProviderStorageDirectory() -> n
     java.lang.String getPathProviderTemporaryDirectory() -> o
     void setup(io.flutter.plugin.common.BinaryMessenger,android.content.Context) -> p
-io.flutter.plugins.pathprovider.PathProviderPlugin$1 -> io.flutter.plugins.a.a$a:
-io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderBackgroundThread -> io.flutter.plugins.a.a$b:
+io.flutter.plugins.pathprovider.PathProviderPlugin$1 -> io.flutter.plugins.b.a$a:
+io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderBackgroundThread -> io.flutter.plugins.b.a$b:
     io.flutter.plugins.pathprovider.PathProviderPlugin this$0 -> a
     void getApplicationDocumentsDirectory(io.flutter.plugin.common.MethodChannel$Result) -> a
     void getStorageDirectory(io.flutter.plugin.common.MethodChannel$Result) -> b
@@ -19843,16 +21157,16 @@ io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderBackgroundThread 
     void getTemporaryDirectory(io.flutter.plugin.common.MethodChannel$Result) -> d
     void getExternalStorageDirectories(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> e
     void getApplicationSupportDirectory(io.flutter.plugin.common.MethodChannel$Result) -> f
-io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderImpl -> io.flutter.plugins.a.a$c:
+io.flutter.plugins.pathprovider.PathProviderPlugin$PathProviderImpl -> io.flutter.plugins.b.a$c:
     void getApplicationDocumentsDirectory(io.flutter.plugin.common.MethodChannel$Result) -> a
     void getStorageDirectory(io.flutter.plugin.common.MethodChannel$Result) -> b
     void getExternalCacheDirectories(io.flutter.plugin.common.MethodChannel$Result) -> c
     void getTemporaryDirectory(io.flutter.plugin.common.MethodChannel$Result) -> d
     void getExternalStorageDirectories(java.lang.String,io.flutter.plugin.common.MethodChannel$Result) -> e
     void getApplicationSupportDirectory(io.flutter.plugin.common.MethodChannel$Result) -> f
-io.flutter.plugins.pathprovider.StorageDirectoryMapper -> io.flutter.plugins.a.b:
+io.flutter.plugins.pathprovider.StorageDirectoryMapper -> io.flutter.plugins.b.b:
     java.lang.String androidType(java.lang.Integer) -> a
-io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl -> io.flutter.plugins.b.a:
+io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl -> io.flutter.plugins.c.a:
     android.os.Handler handler -> c
     android.content.SharedPreferences preferences -> a
     java.util.concurrent.ExecutorService executor -> b
@@ -19863,14 +21177,14 @@ io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl -> io.flutter.plugins
     java.util.Map getAllPrefs() -> e
     void teardown() -> f
     void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> g
-io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl$1 -> io.flutter.plugins.b.a$a:
+io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl$1 -> io.flutter.plugins.c.a$a:
     io.flutter.plugin.common.MethodChannel$Result val$result -> f
     android.content.SharedPreferences$Editor val$editor -> e
     io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl this$0 -> g
-io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl$1$1 -> io.flutter.plugins.b.a$a$a:
+io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl$1$1 -> io.flutter.plugins.c.a$a$a:
     io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl$1 this$1 -> f
     boolean val$response -> e
-io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin -> io.flutter.plugins.b.b:
+io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin -> io.flutter.plugins.c.b:
     io.flutter.plugins.sharedpreferences.MethodCallHandlerImpl handler -> b
     io.flutter.plugin.common.MethodChannel channel -> a
     void setupChannel(io.flutter.plugin.common.BinaryMessenger,android.content.Context) -> a

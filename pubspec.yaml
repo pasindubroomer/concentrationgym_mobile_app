@@ -41,7 +41,6 @@ dependencies:
   cloud_firestore: ^3.1.13
   equatable: ^2.0.3
   formz: ^0.4.1
-  flow_builder: ^0.0.6
   sizer: ^2.0.15
   google_fonts: ^2.3.2
   material_color_gen: ^2.0.0
@@ -51,12 +50,13 @@ dependencies:
   oktoast: ^3.1.5
   device_preview: ^1.0.0
   auto_size_text: ^3.0.0
-  hive: ^2.1.0
-  hive_flutter: ^1.1.0
   path_provider: ^2.0.9
   percent_indicator: ^4.0.1
   dartz: ^0.10.1
   flutter_animator: ^3.2.1
+  firebase_storage: ^10.2.16
+  file_picker: ^4.5.1
+  cached_network_image: ^3.1.0
 
 
 dev_dependencies:
