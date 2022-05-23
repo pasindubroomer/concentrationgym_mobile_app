@@ -14,6 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await Hive.initFlutter();
+  //Hive.deleteFromDisk();
 
   Hive.registerAdapter(UserProfileModelAdapter());
   Hive.registerAdapter(UserRoutingSessionHistoryModelAdapter());

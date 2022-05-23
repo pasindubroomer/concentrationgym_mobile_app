@@ -105,7 +105,6 @@ class CommonRepository {
       }
       return _userSessions;
     } catch (e) {
-      print(e.toString());
       throw Failure(e.toString());
     }
   }
