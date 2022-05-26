@@ -17,6 +17,7 @@ import '../data/repositories/firebase_storage_repository.dart';
 import '../presentation/router/router.dart';
 import '../presentation/screens/profile/sc_profile.dart';
 import '../presentation/screens/splash/sc_splash.dart';
+import '../presentation/screens/twenty_day_challenge/sc_twenty_day_challenge.dart';
 
 class GMAApp extends StatelessWidget {
   const GMAApp({Key? key}) : super(key: key);
@@ -52,7 +53,7 @@ class GMAApp extends StatelessWidget {
                 return const LoginPage();
               } else if (state.appAuthenticatedStatus ==
                   AppAuthenticatedStatus.authenticated) {
-                return const ProfileScreen();
+                return const TwentyDayChallengeScreen();
               }
               return const Center(child: Text('Unhandled State'));
             },

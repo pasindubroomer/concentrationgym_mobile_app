@@ -37,7 +37,7 @@ class CommonRepository {
 
       return UserProfileModel.fromJson(docSnap.data()!);
     } catch (e) {
-      throw Failure(e.toString());
+      rethrow;
     }
   }
 

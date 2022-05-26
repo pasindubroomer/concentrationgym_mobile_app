@@ -212,6 +212,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "dotted_border",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dotted_border-2.0.0+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/equatable-2.0.3",
       "packageUri": "lib/",
@@ -890,7 +896,7 @@
       "languageVersion": "2.16"
     }
   ],
-  "generated": "2022-05-22T14:03:03.835944Z",
+  "generated": "2022-05-26T15:53:34.316258Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
